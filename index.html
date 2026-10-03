@@ -3,64 +3,272 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>AW ALI STORE</title>
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
-body{background:#080808;color:#fff}
-header{padding:20px 7%;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #222;position:sticky;top:0;background:#080808ee;z-index:10}
-.logo{font-size:25px;font-weight:800;letter-spacing:2px}
-.logo span{color:#d4af37}
-nav a{color:#fff;text-decoration:none;margin-left:25px;font-size:14px}
-nav a:hover{color:#d4af37}
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,Helvetica,sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:#f4f8ff;
+color:#10233f;
+}
+
+header{
+position:sticky;
+top:0;
+z-index:100;
+background:rgba(255,255,255,.96);
+backdrop-filter:blur(10px);
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 7%;
+box-shadow:0 3px 20px rgba(0,70,150,.10);
+}
+
+.logo{
+font-size:25px;
+font-weight:900;
+color:#0757d5;
+letter-spacing:1px;
+}
+
+.logo span{
+color:#16a8ff;
+}
+
+nav a{
+text-decoration:none;
+color:#183451;
+margin-left:22px;
+font-weight:600;
+font-size:14px;
+}
+
+nav a:hover{
+color:#0878ff;
+}
 
 .hero{
-min-height:75vh;display:flex;align-items:center;justify-content:center;
-text-align:center;padding:60px 20px;
-background:radial-gradient(circle at center,#242424 0,#080808 60%)
+min-height:78vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:70px 20px;
+background:
+radial-gradient(circle at 20% 20%,#cce8ff,transparent 35%),
+linear-gradient(135deg,#ffffff,#e8f4ff);
 }
-.hero h1{font-size:55px;line-height:1.1;margin-bottom:18px}
-.hero h1 span{color:#d4af37}
-.hero p{color:#aaa;font-size:18px;margin-bottom:30px}
-.btn{
-display:inline-block;padding:14px 28px;background:#d4af37;color:#080808;
-border-radius:30px;text-decoration:none;font-weight:bold;margin:6px
-}
-.btn.dark{background:#fff}
 
-section{padding:70px 7%}
-.title{text-align:center;font-size:32px;margin-bottom:40px}
-.title span{color:#d4af37}
+.hero h1{
+font-size:52px;
+line-height:1.1;
+margin-bottom:18px;
+color:#09284d;
+}
+
+.hero h1 span{
+color:#0878ff;
+}
+
+.hero p{
+font-size:18px;
+color:#5c7188;
+margin-bottom:30px;
+}
+
+.btn{
+display:inline-block;
+padding:14px 28px;
+border-radius:30px;
+text-decoration:none;
+font-weight:bold;
+margin:6px;
+transition:.3s;
+}
+
+.primary{
+background:linear-gradient(135deg,#006cff,#19b8ff);
+color:white;
+box-shadow:0 8px 25px rgba(0,115,255,.25);
+}
+
+.primary:hover{
+transform:translateY(-3px);
+}
+
+.secondary{
+background:white;
+color:#0868d9;
+border:2px solid #0878ff;
+}
+
+section{
+padding:75px 7%;
+}
+
+.title{
+text-align:center;
+font-size:34px;
+margin-bottom:40px;
+color:#102f52;
+}
+
+.title span{
+color:#0878ff;
+}
 
 .products{
-display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:25px
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+gap:25px;
 }
+
 .card{
-background:#121212;border:1px solid #292929;border-radius:18px;
-padding:25px;text-align:center;transition:.3s
+background:white;
+border-radius:20px;
+padding:28px;
+text-align:center;
+box-shadow:0 8px 30px rgba(15,75,140,.10);
+border:1px solid #e0edfa;
+transition:.3s;
 }
-.card:hover{transform:translateY(-7px);border-color:#d4af37}
-.icon{font-size:65px;margin:15px}
-.card h3{font-size:21px;margin:12px}
-.card p{color:#999;font-size:14px;line-height:1.6}
-.price{font-size:22px;color:#d4af37;font-weight:bold;margin:18px}
+
+.card:hover{
+transform:translateY(-8px);
+box-shadow:0 15px 35px rgba(0,110,220,.18);
+}
+
+.icon{
+font-size:62px;
+margin-bottom:15px;
+}
+
+.card h3{
+font-size:21px;
+margin-bottom:10px;
+}
+
+.card p{
+color:#718399;
+line-height:1.6;
+font-size:14px;
+}
+
+.price{
+font-size:22px;
+font-weight:bold;
+color:#0878ff;
+margin:18px;
+}
 
 .about{
-background:#101010;text-align:center
+background:white;
+text-align:center;
 }
-.about p{max-width:700px;margin:auto;color:#aaa;line-height:1.8}
 
-.social{text-align:center}
-.social a{
-display:inline-block;margin:8px;padding:14px 25px;
-border-radius:30px;text-decoration:none;font-weight:bold
+.about p{
+max-width:750px;
+margin:auto;
+color:#66798d;
+line-height:1.9;
+font-size:16px;
 }
-.instagram{background:#e1306c;color:#fff}
-.whatsapp{background:#25d366;color:#fff}
+
+.features{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+margin-top:35px;
+}
+
+.feature{
+background:#f8fbff;
+padding:25px;
+border-radius:16px;
+text-align:center;
+border:1px solid #e2effc;
+}
+
+.feature strong{
+display:block;
+margin-top:10px;
+color:#12385f;
+}
+
+.social{
+text-align:center;
+background:linear-gradient(135deg,#eef8ff,#ffffff);
+}
+
+.social a{
+display:inline-block;
+padding:14px 26px;
+margin:7px;
+border-radius:30px;
+text-decoration:none;
+font-weight:bold;
+}
+
+.instagram{
+background:linear-gradient(135deg,#ff3b81,#7b35ff);
+color:white;
+}
+
+.whatsapp{
+background:#20c967;
+color:white;
+}
 
 footer{
-padding:25px;text-align:center;border-top:1px solid #222;
-color:#777;font-size:13px
+background:#08213e;
+color:#b9cbe0;
+text-align:center;
+padding:25px;
+font-size:13px;
+}
+
+@media(max-width:650px){
+
+header{
+padding:15px 5%;
+}
+
+.logo{
+font-size:21px;
+}
+
+nav a{
+margin-left:8px;
+font-size:12px;
+}
+
+.hero h1{
+font-size:38px;
+}
+
+.hero p{
+font-size:15px;
+}
+
+section{
+padding:55px 5%;
+}
+
+.title{
+font-size:28px;
+}
 }
 </style>
 </head>
@@ -68,7 +276,10 @@ color:#777;font-size:13px
 <body>
 
 <header>
-<div class="logo">A<span>W</span> ALI STORE</div>
+
+<div class="logo">
+A<span>W</span> ALI STORE
+</div>
 
 <nav>
 <a href="#home">Home</a>
@@ -76,75 +287,180 @@ color:#777;font-size:13px
 <a href="#about">About</a>
 <a href="#contact">Contact</a>
 </nav>
+
 </header>
 
-<section class="hero" id="home">
-<div>
-<h1>WELCOME TO <span>AW ALI STORE</span></h1>
-<p>Premium Products • Best Deals • Trusted Shopping</p>
 
-<a class="btn" href="#products">EXPLORE PRODUCTS</a>
-<a class="btn dark"
+<section class="hero" id="home">
+
+<div>
+
+<h1>
+WELCOME TO<br>
+<span>AW ALI STORE</span>
+</h1>
+
+<p>
+Quality Products • Great Deals • Trusted Service
+</p>
+
+<a class="btn primary" href="#products">
+SHOP NOW
+</a>
+
+<a class="btn secondary"
 href="https://www.instagram.com/aw.ali.store?stkn=MTJmazl5aXBtbHEweA=="
-target="_blank">INSTAGRAM</a>
+target="_blank">
+INSTAGRAM
+</a>
+
 </div>
+
 </section>
 
+
 <section id="products">
-<h2 class="title">OUR <span>PRODUCTS</span></h2>
+
+<h2 class="title">
+FEATURED <span>PRODUCTS</span>
+</h2>
 
 <div class="products">
 
 <div class="card">
+
 <div class="icon">🎧</div>
+
 <h3>Wireless Earbuds</h3>
-<p>Modern wireless earbuds with premium sound quality.</p>
-<div class="price">Rs. 1,999</div>
-<a class="btn" href="#contact">Order Now</a>
+
+<p>
+Modern wireless earbuds with excellent sound
+and stylish design.
+</p>
+
+<div class="price">
+Rs. 1,999
 </div>
 
+<a class="btn primary" href="#contact">
+Order Now
+</a>
+
+</div>
+
+
 <div class="card">
+
 <div class="icon">🎮</div>
+
 <h3>Gaming Accessories</h3>
-<p>Gaming products for a better and smoother experience.</p>
-<div class="price">Rs. 2,499</div>
-<a class="btn" href="#contact">Order Now</a>
+
+<p>
+Upgrade your gaming setup with quality
+gaming accessories.
+</p>
+
+<div class="price">
+Rs. 2,499
 </div>
+
+<a class="btn primary" href="#contact">
+Order Now
+</a>
+
+</div>
+
 
 <div class="card">
+
 <div class="icon">📱</div>
+
 <h3>Mobile Accessories</h3>
-<p>Useful and stylish accessories for your mobile.</p>
-<div class="price">Rs. 999</div>
-<a class="btn" href="#contact">Order Now</a>
+
+<p>
+Useful and stylish accessories for your
+daily mobile needs.
+</p>
+
+<div class="price">
+Rs. 999
+</div>
+
+<a class="btn primary" href="#contact">
+Order Now
+</a>
+
 </div>
 
 </div>
+
 </section>
+
 
 <section class="about" id="about">
-<h2 class="title">ABOUT <span>AW ALI STORE</span></h2>
+
+<h2 class="title">
+WHY <span>AW ALI STORE?</span>
+</h2>
+
 <p>
-AW ALI STORE is an online shopping store focused on quality products,
-good prices and reliable customer service. New products and deals will
-be added regularly.
+We aim to provide quality products at reasonable
+prices with a simple and reliable shopping experience.
+New products and special deals will be added regularly.
 </p>
+
+<div class="features">
+
+<div class="feature">
+🔒
+<strong>Trusted Shopping</strong>
+</div>
+
+<div class="feature">
+💰
+<strong>Best Deals</strong>
+</div>
+
+<div class="feature">
+🚚
+<strong>Easy Ordering</strong>
+</div>
+
+<div class="feature">
+⭐
+<strong>Quality Products</strong>
+</div>
+
+</div>
+
 </section>
 
+
 <section class="social" id="contact">
-<h2 class="title">GET IN <span>TOUCH</span></h2>
+
+<h2 class="title">
+CONTACT <span>US</span>
+</h2>
 
 <a class="instagram"
 href="https://www.instagram.com/aw.ali.store?stkn=MTJmazl5aXBtbHEweA=="
-target="_blank">📸 Instagram</a>
+target="_blank">
+📸 Instagram
+</a>
 
 <a class="whatsapp"
 href="https://wa.me/923000000000"
-target="_blank">💬 WhatsApp</a>
+target="_blank">
+💬 WhatsApp
+</a>
+
 </section>
 
+
 <footer>
-© 2026 AW ALI STORE — All Rights Reserved
+
+© 2026 AW ALI STORE • All Rights Reserved
+
 </footer>
 
 </body>
