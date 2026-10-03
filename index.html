@@ -8,209 +8,150 @@
 
 <style>
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial,sans-serif;
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial,sans-serif;
 }
 
 body{
-    background:#080b18;
-    color:white;
+  background:#f5f5f5;
+  color:#111;
 }
 
 header{
-    background:linear-gradient(135deg,#6a00ff,#00d4ff);
-    padding:18px 7%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    position:sticky;
-    top:0;
-    z-index:1000;
-    box-shadow:0 5px 25px rgba(0,212,255,.3);
+  background:#111;
+  color:white;
+  padding:18px 20px;
+  text-align:center;
 }
 
 .logo{
-    font-size:25px;
-    font-weight:bold;
-    letter-spacing:1px;
+  font-size:30px;
+  font-weight:bold;
+  letter-spacing:2px;
 }
 
 .logo span{
-    color:#ffe600;
+  color:#f5b400;
+}
+
+nav{
+  margin-top:12px;
 }
 
 nav a{
-    color:white;
-    text-decoration:none;
-    margin-left:20px;
-    font-weight:bold;
-}
-
-nav a:hover{
-    color:#ffe600;
+  color:white;
+  text-decoration:none;
+  margin:0 8px;
+  font-size:14px;
 }
 
 .hero{
-    min-height:520px;
-    padding:80px 7%;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:40px;
-    background:
-    radial-gradient(circle at 80% 30%,#5b00ff 0%,transparent 35%),
-    radial-gradient(circle at 20% 80%,#00bfff 0%,transparent 30%),
-    #080b18;
-}
-
-.hero-text{
-    max-width:600px;
-}
-
-.badge{
-    display:inline-block;
-    background:rgba(255,255,255,.1);
-    border:1px solid #00d4ff;
-    padding:8px 18px;
-    border-radius:30px;
-    margin-bottom:20px;
-    color:#00eaff;
+  padding:55px 20px;
+  text-align:center;
+  background:linear-gradient(135deg,#111,#333);
+  color:white;
 }
 
 .hero h1{
-    font-size:58px;
-    line-height:1.1;
-    margin-bottom:20px;
-}
-
-.hero h1 span{
-    background:linear-gradient(90deg,#00eaff,#ff00d4,#ffe600);
-    -webkit-background-clip:text;
-    color:transparent;
+  font-size:38px;
+  margin-bottom:12px;
 }
 
 .hero p{
-    color:#c9c9d5;
-    font-size:18px;
-    line-height:1.7;
-    margin-bottom:30px;
+  font-size:17px;
+  margin-bottom:22px;
+  color:#ddd;
 }
 
 .btn{
-    display:inline-block;
-    padding:14px 25px;
-    border-radius:30px;
-    text-decoration:none;
-    font-weight:bold;
-    margin-right:10px;
-    transition:.3s;
+  display:inline-block;
+  padding:13px 24px;
+  background:#f5b400;
+  color:#111;
+  text-decoration:none;
+  border-radius:8px;
+  font-weight:bold;
 }
 
-.btn-whatsapp{
-    background:#25D366;
-    color:white;
+.section{
+  padding:35px 20px;
+  max-width:1100px;
+  margin:auto;
 }
 
-.btn-products{
-
-
-/* ABOUT */
-.about{
-    padding:70px 7%;
-    background:linear-gradient(135deg,#0c1023,#15102c);
-    text-align:center;
+.section h2{
+  text-align:center;
+  margin-bottom:25px;
+  font-size:28px;
 }
 
-.about p{
-    max-width:800px;
-    margin:20px auto;
-    color:#c4c4cf;
-    line-height:1.8;
-    font-size:17px;
+.products{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
 }
 
-/* CONTACT */
-.contact{
-    padding:70px 7%;
-    text-align:center;
+.card{
+  background:white;
+  border-radius:14px;
+  padding:20px;
+  text-align:center;
+  box-shadow:0 4px 15px rgba(0,0,0,.1);
 }
 
-.whatsapp-number{
-    color:#25D366;
-    font-size:24px;
-    font-weight:bold;
-    margin:20px 0;
+.card .icon{
+  font-size:55px;
+  margin-bottom:12px;
 }
 
-/* FOOTER */
+.card h3{
+  margin-bottom:8px;
+}
+
+.card p{
+  color:#666;
+  margin-bottom:15px;
+}
+
+.price{
+  font-size:21px;
+  font-weight:bold;
+  margin-bottom:15px;
+}
+
+.social{
+  text-align:center;
+  padding:35px 20px;
+  background:white;
+}
+
+.social a{
+  display:inline-block;
+  margin:8px;
+  padding:12px 20px;
+  border-radius:8px;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+.instagram{
+  background:#e1306c;
+  color:white;
+}
+
+.whatsapp{
+  background:#25d366;
+  color:white;
+}
+
 footer{
-    padding:25px;
-    text-align:center;
-    background:#050711;
-    color:#888;
-    border-top:1px solid #20243d;
-}
-
-footer strong{
-    color:#00d4ff;
-}
-
-/* MOBILE */
-@media(max-width:800px){
-
-    header{
-        padding:16px 5%;
-    }
-
-    nav{
-        display:none;
-    }
-
-    .hero{
-        min-height:auto;
-        padding:60px 5%;
-        flex-direction:column;
-        text-align:center;
-    }
-
-    .hero h1{
-        font-size:42px;
-    }
-
-    .hero p{
-        font-size:16px;
-    }
-
-    .hero-card{
-        width:280px;
-        height:280px;
-    }
-
-    .hero-card-inner{
-        width:245px;
-        height:245px;
-    }
-
-    .features{
-        padding:45px 5%;
-        grid-template-columns:1fr;
-    }
-
-    .products,
-    .about,
-    .contact{
-        padding:55px 5%;
-    }
-
-    .section-title{
-        font-size:32px;
-    }
-
-    .btn{
-        margin:5px;
-    }
+  background:#111;
+  color:#aaa;
+  text-align:center;
+  padding:20px;
+  font-size:13px;
 }
 </style>
 </head>
@@ -218,160 +159,76 @@ footer strong{
 <body>
 
 <header>
-    <div class="logo">AW <span>ALI STORE</span></div>
+  <div class="logo">A<span>W</span> ALI STORE</div>
 
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#products">Products</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-    </nav>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#products">Products</a>
+    <a href="#contact">Contact</a>
+  </nav>
 </header>
 
 <section class="hero" id="home">
+  <h1>Welcome to AW ALI STORE</h1>
+  <p>Best Products • Best Deals • Trusted Service</p>
 
-    <div class="hero-text">
+  <a class="btn" href="#products">Shop Now</a>
+</section>
 
-        <div class="badge">🔥 Welcome to our store</div>
+<section class="section" id="products">
 
-        <h1>
-            Shop Smart With
-            <span>AW ALI STORE</span>
-        </h1>
+  <h2>Featured Products</h2>
 
-        <p>
-            Discover amazing products, great deals and quality items.
-            Our online store is made for easy and simple shopping.
-        </p>
+  <div class="products">
 
-        <a class="btn btn-whatsapp"
-           href="https://wa.me/923365607981"
-           target="_blank">
-           💬 WhatsApp Us
-        </a>
-
-        <a class="btn btn-products" href="#products">
-           🛍️ Explore Store
-        </a>
-
+    <div class="card">
+      <div class="icon">🎧</div>
+      <h3>Wireless Earbuds</h3>
+      <p>Premium sound with stylish design.</p>
+      <div class="price">Rs. 1,999</div>
+      <a class="btn" href="https://wa.me/923000000000">Order Now</a>
     </div>
 
-    <div class="hero-card">
-        <div class="hero-card-inner">
-            <div class="big">🛍️</div>
-            <h2>AW ALI STORE</h2>
-            <p>Online Shopping</p>
-        </div>
+    <div class="card">
+      <div class="icon">🎮</div>
+      <h3>Gaming Accessories</h3>
+      <p>Upgrade your gaming experience.</p>
+      <div class="price">Rs. 2,499</div>
+      <a class="btn" href="https://wa.me/923000000000">Order Now</a>
     </div>
+
+    <div class="card">
+      <div class="icon">📱</div>
+      <h3>Mobile Accessories</h3>
+      <p>Useful accessories for your phone.</p>
+      <div class="price">Rs. 999</div>
+      <a class="btn" href="https://wa.me/923000000000">Order Now</a>
+    </div>
+
+  </div>
 
 </section>
 
-<section class="features">
+<section class="social" id="contact">
 
-    <div class="feature">
-        <div class="icon">🚚</div>
-        <h3>Easy Shopping</h3>
-        <p>Simple and convenient online shopping experience.</p>
-    </div>
+  <h2>Contact & Follow Us</h2>
 
-    <div class="feature">
-        <div class="icon">💎</div>
-        <h3>Quality Products</h3>
-        <p>We aim to provide useful and quality products.</p>
-    </div>
+  <a class="instagram"
+     href="https://www.instagram.com/aw.ali.store?stkn=MTJmazl5aXBtbHEweA=="
+     target="_blank">
+     📸 Instagram
+  </a>
 
-    <div class="feature">
-        <div class="icon">💬</div>
-        <h3>WhatsApp Support</h3>
-        <p>Contact us directly through WhatsApp for orders.</p>
-    </div>
-
-</section>
-
-<!-- PRODUCTS -->
-<section class="products" id="products">
-
-    <h2 class="section-title">
-        Our <span>Products</span>
-    </h2>
-
-    <p class="section-text">
-        Check out our latest product.
-    </p>
-
-    <div class="product-box">
-
-        <div class="emoji">⌚</div>
-
-        <h3>Smaate Smart Watch Case</h3>
-
-        <p>
-            Compatible with TORJALPH Choiknbo TJ37
-            1.83" Smart Watch.
-        </p>
-
-        <p>
-            TPU Case with Screen Protector.
-        </p>
-
-        <div class="price">
-            PKR 3,000
-        </div>
-
-        <a class="buy-btn"
-           href="https://a.co/d/0geg73wR"
-           target="_blank">
-           🛒 Buy Now
-        </a>
-
-    </div>
-
-</section>
-
-<section class="about" id="about">
-
-    <h2 class="section-title">
-        About <span>AW ALI STORE</span>
-    </h2>
-
-    <p>
-        AW ALI STORE is an online shopping store focused on bringing
-        useful products and attractive deals to customers.
-        Our goal is to make online shopping simple, easy and convenient.
-    </p>
-
-</section>
-
-<section class="contact" id="contact">
-
-    <h2 class="section-title">
-        Contact <span>Us</span>
-    </h2>
-
-    <p class="section-text">
-        For orders and product information, contact us directly.
-    </p>
-
-    <div class="whatsapp-number">
-        📱 0336 5607981
-    </div>
-
-    <a class="btn btn-whatsapp"
-       href="https://wa.me/923365607981"
-       target="_blank">
-       💬 Chat on WhatsApp
-    </a>
-
-    <a href="https://www.instagram.com/aw.ali.store/"
-       target="_blank"
-       style="display:inline-block;padding:12px 20px;background:#E1306C;color:white;text-decoration:none;border-radius:10px;font-weight:bold;">
-       📸 Follow @aw.ali.store on Instagram
-    </a>
+  <a class="whatsapp"
+     href="https://wa.me/923000000000"
+     target="_blank">
+     💬 WhatsApp
+  </a>
 
 </section>
 
 <footer>
-    © 2026 <strong>AW ALI STORE</strong> — All Rights Reserved.
+  © 2026 AW ALI STORE — All Rights Reserved
 </footer>
 
 </body>
