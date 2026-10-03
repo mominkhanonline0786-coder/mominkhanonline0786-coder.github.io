@@ -3,2115 +3,3189 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#0b5cff">
-<meta name="description" content="AW ALI STORE - Premium Online Store">
-<title>AW ALI STORE | Premium Online Store</title>
+
+<title>AW ALI STORE</title>
+
+<meta name="description" content="AW ALI STORE - Premium online shopping experience.">
+<meta name="theme-color" content="#080808">
 
 <style>
-  
+
+/* =========================================================
+   AW ALI STORE
+   PREMIUM DARK GOLD + PINK + RED + WHITE THEME
+   ========================================================= */
+
 :root{
-  --bg:#050505;
-  --bg2:#0b0809;
-  --card:#111010;
-  --card2:#171313;
+    --black:#050505;
+    --black2:#090909;
+    --black3:#111111;
+    --black4:#171717;
 
-  --gold:#b8942e;
-  --gold2:#d4af37;
+    --white:#ffffff;
+    --white2:#eeeeee;
+    --gray:#a7a7a7;
+    --gray2:#707070;
 
-  --red:#8b1118;
-  --red2:#b51d27;
+    --gold:#d4af37;
+    --gold2:#f0c94a;
+    --gold3:#8f7020;
 
-  --pink:#8f245c;
-  --pink2:#b83d78;
+    --red:#b51220;
+    --red2:#e31b2f;
+    --red3:#5e0710;
 
-  --white:#f5f5f5;
-  --muted:#a6a0a0;
+    --pink:#c21868;
+    --pink2:#f03b92;
+    --pink3:#681035;
 
-  --border:rgba(212,175,55,.22);
-  --shadow:0 15px 45px rgba(0,0,0,.65);
+    --border:rgba(212,175,55,.22);
+    --shadow:0 20px 60px rgba(0,0,0,.65);
+
+    --radius:18px;
+    --transition:.3s ease;
 }
 
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
 }
 
 html{
-scroll-behavior:smooth;
+    background:var(--black);
 }
 
 body{
-font-family:Arial,Helvetica,sans-serif;
-background:var(--light);
-color:var(--text);
-line-height:1.6;
-overflow-x:hidden;
+    font-family:Arial,Helvetica,sans-serif;
+    background:
+        radial-gradient(circle at 15% 10%,rgba(194,24,104,.08),transparent 28%),
+        radial-gradient(circle at 85% 20%,rgba(181,18,32,.08),transparent 30%),
+        radial-gradient(circle at 50% 70%,rgba(212,175,55,.04),transparent 35%),
+        var(--black);
+    color:var(--white);
+    line-height:1.6;
+    overflow-x:hidden;
 }
 
 a{
-text-decoration:none;
-color:inherit;
+    color:inherit;
+    text-decoration:none;
 }
 
 button,
 input,
 textarea{
-font-family:inherit;
+    font:inherit;
 }
 
 button{
-cursor:pointer;
+    cursor:pointer;
+}
+
+img{
+    max-width:100%;
+    display:block;
 }
 
 .container{
-width:min(1200px,92%);
-margin:auto;
+    width:min(1180px,92%);
+    margin:auto;
 }
+
+/* =========================================================
+   TOP BAR
+   ========================================================= */
 
 .topbar{
-background:var(--darkblue);
-color:white;
-padding:9px 0;
-font-size:13px;
+    background:
+        linear-gradient(90deg,
+        #070707,
+        #18070d,
+        #25090f,
+        #18070d,
+        #070707);
+    border-bottom:1px solid rgba(212,175,55,.2);
+    color:var(--white2);
+    text-align:center;
+    padding:9px 15px;
+    font-size:13px;
+    letter-spacing:.5px;
 }
 
-.topbar-content{
-display:flex;
-justify-content:space-between;
-align-items:center;
-gap:15px;
+.topbar strong{
+    color:var(--gold2);
 }
 
-.topbar a{
-font-weight:bold;
-color:#fff;
+.topbar span{
+    color:var(--pink2);
 }
 
-header{
-position:sticky;
-top:0;
-z-index:1000;
-background:rgba(255,255,255,.94);
-backdrop-filter:blur(15px);
-border-bottom:1px solid var(--border);
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:rgba(5,5,5,.92);
+    backdrop-filter:blur(18px);
+    border-bottom:1px solid rgba(212,175,55,.16);
 }
 
-.navbar{
-height:76px;
-display:flex;
-align-items:center;
-justify-content:space-between;
-gap:25px;
+.nav{
+    min-height:78px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:25px;
 }
 
 .logo{
-display:flex;
-align-items:center;
-gap:10px;
-font-size:20px;
-font-weight:900;
-white-space:nowrap;
+    display:flex;
+    align-items:center;
+    gap:11px;
+    font-size:22px;
+    font-weight:900;
+    letter-spacing:1px;
 }
 
-.logo-box{
-width:44px;
-height:44px;
-border-radius:13px;
-display:grid;
-place-items:center;
-color:white;
-font-weight:900;
-background:linear-gradient(135deg,var(--blue),var(--blue2));
-box-shadow:0 8px 22px rgba(11,92,255,.25);
+.logo-mark{
+    width:44px;
+    height:44px;
+    border-radius:13px;
+    display:grid;
+    place-items:center;
+    font-weight:900;
+    font-size:20px;
+    color:#080808;
+    background:
+        linear-gradient(135deg,
+        var(--gold2),
+        var(--gold),
+        var(--pink2));
+    box-shadow:
+        0 0 18px rgba(212,175,55,.22),
+        0 0 28px rgba(194,24,104,.12);
 }
 
-.logo-text small{
-display:block;
-font-size:8px;
-letter-spacing:2px;
-color:var(--muted);
+.logo-text span:first-child{
+    color:var(--white);
+}
+
+.logo-text span:last-child{
+    color:var(--gold2);
 }
 
 .nav-links{
-display:flex;
-align-items:center;
-gap:25px;
+    display:flex;
+    align-items:center;
+    gap:28px;
 }
 
 .nav-links a{
-font-size:14px;
-font-weight:700;
-color:var(--muted);
-transition:.2s;
+    color:#d7d7d7;
+    font-size:14px;
+    font-weight:700;
+    transition:var(--transition);
+    position:relative;
 }
 
 .nav-links a:hover{
-color:var(--blue);
+    color:var(--pink2);
 }
 
-.nav-buttons{
-display:flex;
-align-items:center;
-gap:8px;
+.nav-links a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-7px;
+    width:0;
+    height:2px;
+    background:linear-gradient(90deg,var(--gold2),var(--pink2));
+    transition:var(--transition);
 }
 
-.icon-button{
-width:42px;
-height:42px;
-border:1px solid var(--border);
-border-radius:12px;
-background:white;
-display:grid;
-place-items:center;
-font-size:17px;
-transition:.2s;
+.nav-links a:hover::after{
+    width:100%;
 }
 
-.icon-button:hover{
-border-color:var(--blue);
-color:var(--blue);
-transform:translateY(-2px);
+.nav-actions{
+    display:flex;
+    align-items:center;
+    gap:9px;
 }
 
-.menu-button{
-display:none;
+.icon-btn{
+    width:43px;
+    height:43px;
+    border-radius:12px;
+    border:1px solid rgba(255,255,255,.1);
+    background:#101010;
+    color:white;
+    display:grid;
+    place-items:center;
+    transition:var(--transition);
 }
+
+.icon-btn:hover{
+    border-color:var(--gold);
+    color:var(--gold2);
+    transform:translateY(-2px);
+    box-shadow:0 0 20px rgba(212,175,55,.12);
+}
+
+.menu-btn{
+    display:none;
+}
+
+/* =========================================================
+   MOBILE MENU
+   ========================================================= */
+
+.mobile-menu{
+    display:none;
+    background:#090909;
+    border-top:1px solid rgba(212,175,55,.15);
+    border-bottom:1px solid rgba(194,24,104,.2);
+}
+
+.mobile-menu.active{
+    display:block;
+}
+
+.mobile-menu a{
+    display:block;
+    padding:14px 5%;
+    color:#ddd;
+    border-bottom:1px solid rgba(255,255,255,.05);
+}
+
+.mobile-menu a:hover{
+    color:var(--pink2);
+    background:#140a0d;
+}
+
+/* =========================================================
+   HERO
+   ========================================================= */
 
 .hero{
-padding:90px 0 75px;
-background:
-radial-gradient(circle at 10% 20%,rgba(11,92,255,.15),transparent 30%),
-radial-gradient(circle at 90% 15%,rgba(0,168,255,.13),transparent 30%);
+    min-height:690px;
+    display:flex;
+    align-items:center;
+    position:relative;
+    overflow:hidden;
+}
+
+.hero::before{
+    content:"";
+    position:absolute;
+    width:520px;
+    height:520px;
+    border-radius:50%;
+    background:rgba(194,24,104,.12);
+    filter:blur(100px);
+    top:-180px;
+    right:-120px;
+}
+
+.hero::after{
+    content:"";
+    position:absolute;
+    width:430px;
+    height:430px;
+    border-radius:50%;
+    background:rgba(181,18,32,.1);
+    filter:blur(100px);
+    bottom:-200px;
+    left:-120px;
 }
 
 .hero-grid{
-display:grid;
-grid-template-columns:1.05fr .95fr;
-align-items:center;
-gap:55px;
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    gap:60px;
+    align-items:center;
+    position:relative;
+    z-index:2;
 }
 
-.badge{
-display:inline-flex;
-padding:7px 14px;
-border-radius:999px;
-background:#eaf2ff;
-color:var(--blue);
-font-size:12px;
-font-weight:900;
-letter-spacing:.5px;
+.hero-content{
+    max-width:680px;
+}
+
+.hero-badge{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:8px 14px;
+    border:1px solid rgba(212,175,55,.3);
+    background:rgba(212,175,55,.06);
+    color:var(--gold2);
+    border-radius:50px;
+    font-size:12px;
+    font-weight:800;
+    letter-spacing:1px;
+    text-transform:uppercase;
+    margin-bottom:22px;
+}
+
+.hero-badge i{
+    width:7px;
+    height:7px;
+    background:var(--pink2);
+    border-radius:50%;
+    box-shadow:0 0 12px var(--pink2);
 }
 
 .hero h1{
-font-size:clamp(44px,6vw,76px);
-line-height:.98;
-letter-spacing:-3px;
-margin-top:15px;
+    font-size:clamp(42px,6vw,78px);
+    line-height:1.02;
+    letter-spacing:-3px;
+    margin-bottom:25px;
 }
 
-.hero h1 span{
-background:linear-gradient(90deg,var(--blue),var(--blue2));
--webkit-background-clip:text;
-color:transparent;
+.hero h1 .gold{
+    color:var(--gold2);
 }
 
-.hero p{
-margin:25px 0;
-font-size:18px;
-color:var(--muted);
-max-width:650px;
+.hero h1 .pink{
+    color:var(--pink2);
+}
+
+.hero h1 .red{
+    color:var(--red2);
+}
+
+.hero-text{
+    color:#aaa;
+    max-width:590px;
+    font-size:17px;
+    margin-bottom:32px;
 }
 
 .hero-buttons{
-display:flex;
-flex-wrap:wrap;
-gap:12px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:13px;
 }
 
 .btn{
-min-height:48px;
-padding:0 20px;
-border-radius:13px;
-display:inline-flex;
-align-items:center;
-justify-content:center;
-gap:8px;
-font-weight:800;
-transition:.2s;
-border:none;
+    border:0;
+    border-radius:13px;
+    padding:14px 22px;
+    font-weight:800;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:9px;
+    transition:var(--transition);
 }
 
-.btn-primary{
-color:white;
-background:linear-gradient(135deg,var(--blue),var(--blue2));
-box-shadow:0 12px 28px rgba(11,92,255,.24);
+.btn-gold{
+    color:#080808;
+    background:linear-gradient(135deg,var(--gold2),var(--gold));
+    box-shadow:0 8px 30px rgba(212,175,55,.15);
 }
 
-.btn-primary:hover{
-transform:translateY(-2px);
+.btn-gold:hover{
+    transform:translateY(-3px);
+    box-shadow:0 12px 35px rgba(212,175,55,.28);
+}
+
+.btn-red{
+    color:white;
+    background:linear-gradient(135deg,var(--red2),var(--red));
+}
+
+.btn-red:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 30px rgba(227,27,47,.22);
+}
+
+.btn-pink{
+    color:white;
+    background:linear-gradient(135deg,var(--pink2),var(--pink));
+}
+
+.btn-pink:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 30px rgba(240,59,146,.25);
 }
 
 .btn-outline{
-background:white;
-border:1px solid var(--border);
-color:var(--text);
+    color:var(--white);
+    background:#0d0d0d;
+    border:1px solid rgba(212,175,55,.35);
 }
 
 .btn-outline:hover{
-border-color:var(--blue);
-color:var(--blue);
+    border-color:var(--pink2);
+    color:var(--pink2);
+    transform:translateY(-3px);
+}
+
+/* =========================================================
+   HERO CARD
+   ========================================================= */
+
+.hero-visual{
+    min-height:430px;
+    position:relative;
+    display:grid;
+    place-items:center;
 }
 
 .hero-card{
-min-height:470px;
-border-radius:32px;
-padding:24px;
-background:linear-gradient(145deg,var(--blue),var(--blue2));
-box-shadow:0 30px 70px rgba(11,92,255,.25);
-position:relative;
-overflow:hidden;
+    width:min(410px,100%);
+    min-height:390px;
+    border-radius:30px;
+    position:relative;
+    overflow:hidden;
+    background:
+        linear-gradient(145deg,
+        #151515,
+        #090909 55%,
+        #16080e);
+    border:1px solid rgba(212,175,55,.28);
+    box-shadow:
+        0 30px 90px rgba(0,0,0,.8),
+        inset 0 0 70px rgba(194,24,104,.05);
+    padding:32px;
 }
 
-.hero-card:before{
-content:"";
-position:absolute;
-width:330px;
-height:330px;
-border-radius:50%;
-background:rgba(255,255,255,.1);
-right:-100px;
-top:-100px;
+.hero-card::before{
+    content:"";
+    position:absolute;
+    width:230px;
+    height:230px;
+    background:var(--pink);
+    filter:blur(100px);
+    opacity:.14;
+    right:-100px;
+    top:-90px;
 }
 
-.hero-card:after{
-content:"";
-position:absolute;
-width:250px;
-height:250px;
-border-radius:50%;
-background:rgba(255,255,255,.08);
-left:-100px;
-bottom:-100px;
+.hero-card::after{
+    content:"";
+    position:absolute;
+    width:180px;
+    height:180px;
+    background:var(--gold);
+    filter:blur(90px);
+    opacity:.1;
+    left:-80px;
+    bottom:-70px;
 }
 
-.hero-inner{
-height:100%;
-min-height:420px;
-border:1px solid rgba(255,255,255,.25);
-border-radius:25px;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-color:white;
-position:relative;
-z-index:2;
+.hero-card-top{
+    display:flex;
+    justify-content:space-between;
+    position:relative;
+    z-index:2;
 }
 
-.aw-circle{
-width:145px;
-height:145px;
-border-radius:38px;
-background:white;
-color:var(--blue);
-display:grid;
-place-items:center;
-font-size:48px;
-font-weight:950;
-box-shadow:0 20px 45px rgba(0,0,0,.18);
-margin-bottom:25px;
+.hero-card-label{
+    color:var(--gold2);
+    font-size:12px;
+    font-weight:800;
+    text-transform:uppercase;
+    letter-spacing:2px;
 }
 
-.hero-inner h2{
-font-size:32px;
+.hero-card-symbol{
+    width:50px;
+    height:50px;
+    border-radius:16px;
+    display:grid;
+    place-items:center;
+    color:#080808;
+    font-weight:900;
+    background:linear-gradient(135deg,var(--gold2),var(--pink2));
 }
 
-.hero-inner p{
-color:rgba(255,255,255,.8);
-font-size:14px;
-margin-top:8px;
+.hero-orb{
+    width:205px;
+    height:205px;
+    border-radius:50%;
+    margin:42px auto 35px;
+    position:relative;
+    background:
+        radial-gradient(circle at 30% 25%,
+        #fff8d8 0 3%,
+        transparent 4%),
+        linear-gradient(145deg,
+        var(--gold2),
+        var(--gold),
+        var(--pink),
+        var(--red));
+    box-shadow:
+        0 0 50px rgba(212,175,55,.18),
+        0 0 90px rgba(194,24,104,.12);
+    animation:float 5s ease-in-out infinite;
 }
+
+.hero-orb::before{
+    content:"AW";
+    position:absolute;
+    inset:0;
+    display:grid;
+    place-items:center;
+    color:#080808;
+    font-size:50px;
+    font-weight:1000;
+}
+
+.hero-orb::after{
+    content:"";
+    position:absolute;
+    inset:16px;
+    border:1px solid rgba(255,255,255,.35);
+    border-radius:50%;
+}
+
+@keyframes float{
+    0%,100%{transform:translateY(0)}
+    50%{transform:translateY(-12px)}
+}
+
+.hero-card-bottom{
+    position:relative;
+    z-index:2;
+}
+
+.hero-card-bottom h3{
+    font-size:25px;
+    margin-bottom:5px;
+}
+
+.hero-card-bottom p{
+    color:#999;
+    font-size:13px;
+}
+
+/* =========================================================
+   STATS
+   ========================================================= */
 
 .stats{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:15px;
-margin-top:45px;
+    padding:35px 0;
+    border-top:1px solid rgba(255,255,255,.05);
+    border-bottom:1px solid rgba(255,255,255,.05);
+    background:#080808;
+}
+
+.stats-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
 }
 
 .stat{
-background:white;
-border:1px solid var(--border);
-border-radius:17px;
-padding:18px;
-text-align:center;
-box-shadow:var(--shadow);
+    text-align:center;
+    padding:15px;
+    border-right:1px solid rgba(255,255,255,.06);
+}
+
+.stat:last-child{
+    border-right:0;
 }
 
 .stat strong{
-display:block;
-font-size:23px;
+    display:block;
+    color:var(--gold2);
+    font-size:27px;
+    margin-bottom:3px;
 }
 
 .stat span{
-font-size:12px;
-color:var(--muted);
-font-weight:bold;
+    color:#858585;
+    font-size:12px;
 }
+
+/* =========================================================
+   SECTION
+   ========================================================= */
 
 .section{
-padding:90px 0;
+    padding:100px 0;
 }
 
-.section-title{
-text-align:center;
-max-width:720px;
-margin:0 auto 48px;
+.section-dark{
+    background:
+        linear-gradient(180deg,
+        #070707,
+        #0c0809,
+        #070707);
 }
 
-.section-title .badge{
-margin-bottom:10px;
+.section-head{
+    max-width:700px;
+    margin:0 auto 50px;
+    text-align:center;
 }
 
-.section-title h2{
-font-size:clamp(30px,5vw,46px);
-line-height:1.1;
-margin-bottom:14px;
+.eyebrow{
+    display:inline-block;
+    color:var(--pink2);
+    font-size:12px;
+    font-weight:900;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    margin-bottom:10px;
 }
 
-.section-title p{
-color:var(--muted);
+.section-head h2{
+    font-size:clamp(31px,4vw,49px);
+    line-height:1.1;
+    margin-bottom:14px;
 }
+
+.section-head h2 span{
+    color:var(--gold2);
+}
+
+.section-head p{
+    color:#8e8e8e;
+    font-size:15px;
+}
+
+/* =========================================================
+   CATEGORIES
+   ========================================================= */
 
 .categories{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:17px;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:17px;
 }
 
 .category{
-background:white;
-border:1px solid var(--border);
-border-radius:20px;
-padding:24px;
-min-height:175px;
-transition:.25s;
-position:relative;
-overflow:hidden;
+    min-height:205px;
+    padding:25px;
+    border-radius:var(--radius);
+    border:1px solid rgba(255,255,255,.07);
+    background:
+        linear-gradient(145deg,#131313,#0a0a0a);
+    position:relative;
+    overflow:hidden;
+    transition:var(--transition);
 }
 
 .category:hover{
-transform:translateY(-6px);
-box-shadow:var(--shadow);
-border-color:#b7d0ff;
+    transform:translateY(-7px);
+    border-color:rgba(212,175,55,.38);
+    box-shadow:var(--shadow);
+}
+
+.category::after{
+    content:"";
+    position:absolute;
+    width:130px;
+    height:130px;
+    border-radius:50%;
+    right:-60px;
+    bottom:-60px;
+    background:var(--pink);
+    filter:blur(55px);
+    opacity:.12;
 }
 
 .category-icon{
-width:53px;
-height:53px;
-border-radius:16px;
-display:grid;
-place-items:center;
-background:#eaf2ff;
-font-size:24px;
-margin-bottom:25px;
+    width:55px;
+    height:55px;
+    border-radius:16px;
+    display:grid;
+    place-items:center;
+    font-size:24px;
+    margin-bottom:25px;
+    color:var(--gold2);
+    background:rgba(212,175,55,.07);
+    border:1px solid rgba(212,175,55,.2);
+}
+
+.category:nth-child(2) .category-icon{
+    color:var(--pink2);
+    background:rgba(194,24,104,.08);
+    border-color:rgba(194,24,104,.22);
+}
+
+.category:nth-child(3) .category-icon{
+    color:var(--red2);
+    background:rgba(181,18,32,.08);
+    border-color:rgba(181,18,32,.22);
 }
 
 .category h3{
-font-size:18px;
+    font-size:18px;
+    margin-bottom:6px;
 }
 
 .category p{
-font-size:13px;
-color:var(--muted);
-margin-top:5px;
+    color:#777;
+    font-size:13px;
 }
 
-.category-arrow{
-position:absolute;
-right:18px;
-bottom:18px;
-color:var(--blue);
-font-weight:900;
-}
+/* =========================================================
+   PRODUCTS EMPTY
+   ========================================================= */
 
-.empty-store{
-background:white;
-border:1px dashed #a9c4ef;
-border-radius:25px;
-padding:65px 25px;
-text-align:center;
+.product-empty{
+    border:1px dashed rgba(212,175,55,.3);
+    border-radius:25px;
+    min-height:300px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:40px;
+    background:
+        radial-gradient(circle at center,
+        rgba(194,24,104,.06),
+        transparent 55%),
+        #0b0b0b;
 }
 
 .empty-icon{
-width:80px;
-height:80px;
-margin:0 auto 20px;
-border-radius:24px;
-background:#eaf2ff;
-display:grid;
-place-items:center;
-font-size:34px;
+    width:72px;
+    height:72px;
+    margin:0 auto 20px;
+    display:grid;
+    place-items:center;
+    border-radius:22px;
+    font-size:28px;
+    color:var(--gold2);
+    border:1px solid rgba(212,175,55,.25);
+    background:#151515;
 }
 
-.empty-store h3{
-font-size:28px;
-margin-bottom:8px;
+.product-empty h3{
+    font-size:25px;
+    margin-bottom:9px;
 }
 
-.empty-store p{
-color:var(--muted);
-max-width:600px;
-margin:0 auto 20px;
+.product-empty p{
+    color:#777;
+    max-width:520px;
+    margin:auto;
 }
+
+/* =========================================================
+   FEATURES
+   ========================================================= */
 
 .features{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:18px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
 }
 
 .feature{
-background:white;
-border:1px solid var(--border);
-border-radius:20px;
-padding:27px;
+    padding:30px;
+    border-radius:20px;
+    background:#101010;
+    border:1px solid rgba(255,255,255,.06);
+    transition:var(--transition);
+}
+
+.feature:hover{
+    transform:translateY(-5px);
+    border-color:rgba(194,24,104,.35);
 }
 
 .feature-icon{
-width:50px;
-height:50px;
-border-radius:14px;
-background:#eaf2ff;
-display:grid;
-place-items:center;
-font-size:22px;
-margin-bottom:20px;
+    font-size:27px;
+    margin-bottom:18px;
 }
 
 .feature h3{
-font-size:18px;
-margin-bottom:7px;
+    margin-bottom:8px;
+    font-size:18px;
 }
 
 .feature p{
-font-size:14px;
-color:var(--muted);
+    color:#818181;
+    font-size:14px;
 }
 
-.about{
-display:grid;
-grid-template-columns:.9fr 1.1fr;
-gap:55px;
-align-items:center;
+/* =========================================================
+   ABOUT
+   ========================================================= */
+
+.about-grid{
+    display:grid;
+    grid-template-columns:.9fr 1.1fr;
+    gap:70px;
+    align-items:center;
 }
 
-.about-image{
-min-height:430px;
-border-radius:28px;
-background:linear-gradient(145deg,#061b42,#0b5cff 60%,#00a8ff);
-display:grid;
-place-items:center;
-color:white;
-position:relative;
-overflow:hidden;
-box-shadow:0 25px 60px rgba(11,92,255,.2);
+.about-art{
+    min-height:420px;
+    border-radius:30px;
+    position:relative;
+    overflow:hidden;
+    background:
+        linear-gradient(145deg,
+        #16070b,
+        #090909 55%,
+        #11100a);
+    border:1px solid rgba(212,175,55,.2);
+    box-shadow:var(--shadow);
 }
 
-.about-image:before{
-content:"";
-position:absolute;
-width:300px;
-height:300px;
-border-radius:50%;
-background:rgba(255,255,255,.08);
-top:-110px;
-right:-80px;
+.about-art::before{
+    content:"";
+    position:absolute;
+    width:280px;
+    height:280px;
+    background:var(--pink);
+    filter:blur(110px);
+    opacity:.13;
+    top:-100px;
+    right:-80px;
 }
 
-.about-aw{
-font-size:95px;
-font-weight:950;
-letter-spacing:-8px;
-position:relative;
-z-index:2;
+.about-art::after{
+    content:"";
+    position:absolute;
+    width:250px;
+    height:250px;
+    background:var(--gold);
+    filter:blur(100px);
+    opacity:.1;
+    bottom:-100px;
+    left:-80px;
+}
+
+.about-logo{
+    position:absolute;
+    inset:0;
+    display:grid;
+    place-items:center;
+}
+
+.about-logo-box{
+    width:190px;
+    height:190px;
+    border-radius:45px;
+    display:grid;
+    place-items:center;
+    font-size:48px;
+    font-weight:1000;
+    color:#090909;
+    background:
+        linear-gradient(135deg,
+        var(--gold2),
+        var(--gold),
+        var(--pink2));
+    box-shadow:
+        0 0 70px rgba(212,175,55,.12),
+        0 0 80px rgba(194,24,104,.1);
+    transform:rotate(-5deg);
 }
 
 .about-content h2{
-font-size:clamp(30px,4vw,48px);
-line-height:1.08;
-margin:12px 0 18px;
+    font-size:clamp(32px,4vw,50px);
+    line-height:1.1;
+    margin-bottom:20px;
 }
 
-.about-content p{
-color:var(--muted);
-margin-bottom:16px;
+.about-content h2 span{
+    color:var(--pink2);
 }
 
-.check-list{
-display:grid;
-gap:11px;
-margin-top:20px;
+.about-content>p{
+    color:#8d8d8d;
+    margin-bottom:25px;
 }
 
-.check{
-display:flex;
-gap:10px;
-align-items:center;
-font-size:14px;
-font-weight:700;
+.about-list{
+    display:grid;
+    gap:13px;
 }
 
-.check span{
-width:22px;
-height:22px;
-border-radius:50%;
-background:#dff8eb;
-color:var(--green);
-display:grid;
-place-items:center;
-font-size:12px;
+.about-list li{
+    list-style:none;
+    display:flex;
+    gap:11px;
+    color:#c5c5c5;
+    font-size:14px;
 }
 
-.faq-list{
-max-width:850px;
-margin:auto;
-display:grid;
-gap:12px;
+.about-list li::before{
+    content:"✓";
+    color:var(--gold2);
+    font-weight:900;
 }
+
+/* =========================================================
+   WHY US
+   ========================================================= */
+
+.why-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:16px;
+}
+
+.why-card{
+    text-align:center;
+    padding:28px 18px;
+    background:#0d0d0d;
+    border-radius:18px;
+    border:1px solid rgba(255,255,255,.06);
+}
+
+.why-card strong{
+    display:block;
+    font-size:31px;
+    color:var(--gold2);
+    margin-bottom:7px;
+}
+
+.why-card:nth-child(2) strong{
+    color:var(--pink2);
+}
+
+.why-card:nth-child(3) strong{
+    color:var(--red2);
+}
+
+.why-card span{
+    color:#777;
+    font-size:13px;
+}
+
+/* =========================================================
+   FAQ
+   ========================================================= */
 
 .faq{
-background:white;
-border:1px solid var(--border);
-border-radius:16px;
-overflow:hidden;
+    max-width:850px;
+    margin:auto;
+    display:grid;
+    gap:12px;
+}
+
+.faq-item{
+    border:1px solid rgba(255,255,255,.07);
+    border-radius:15px;
+    overflow:hidden;
+    background:#0d0d0d;
 }
 
 .faq-question{
-width:100%;
-padding:20px;
-border:0;
-background:white;
-display:flex;
-justify-content:space-between;
-align-items:center;
-gap:15px;
-text-align:left;
-font-weight:850;
-font-size:15px;
+    width:100%;
+    border:0;
+    background:none;
+    color:white;
+    padding:20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    text-align:left;
+    font-weight:800;
+}
+
+.faq-question span{
+    color:var(--gold2);
+    font-size:22px;
+    transition:var(--transition);
+}
+
+.faq-item.active .faq-question span{
+    transform:rotate(45deg);
+    color:var(--pink2);
 }
 
 .faq-answer{
-display:none;
-padding:0 20px 20px;
-color:var(--muted);
-font-size:14px;
+    max-height:0;
+    overflow:hidden;
+    transition:max-height .35s ease;
 }
 
-.faq.open .faq-answer{
-display:block;
+.faq-answer p{
+    color:#858585;
+    padding:0 20px 20px;
+    font-size:14px;
 }
 
-.faq.open .plus{
-transform:rotate(45deg);
-}
-
-.plus{
-font-size:24px;
-color:var(--blue);
-transition:.2s;
-}
+/* =========================================================
+   CONTACT
+   ========================================================= */
 
 .contact-grid{
-display:grid;
-grid-template-columns:.8fr 1.2fr;
-gap:20px;
+    display:grid;
+    grid-template-columns:.8fr 1.2fr;
+    gap:30px;
 }
 
-.contact-card,
-.form-card{
-background:white;
-border:1px solid var(--border);
-border-radius:24px;
-padding:30px;
+.contact-info{
+    padding:32px;
+    border-radius:22px;
+    background:
+        linear-gradient(145deg,#151515,#090909);
+    border:1px solid rgba(212,175,55,.16);
 }
 
-.contact-card h3,
-.form-card h3{
-font-size:25px;
-margin-bottom:10px;
+.contact-info h3{
+    font-size:25px;
+    margin-bottom:10px;
 }
 
-.contact-card>p{
-color:var(--muted);
-margin-bottom:25px;
+.contact-info>p{
+    color:#777;
+    font-size:14px;
+    margin-bottom:28px;
 }
 
-.contact-list{
-display:grid;
-gap:13px;
+.contact-links{
+    display:grid;
+    gap:12px;
 }
 
-.contact-item{
-display:flex;
-align-items:center;
-gap:13px;
-padding:13px;
-border:1px solid var(--border);
-border-radius:14px;
+.contact-link{
+    display:flex;
+    align-items:center;
+    gap:13px;
+    padding:14px;
+    border-radius:13px;
+    background:#101010;
+    border:1px solid rgba(255,255,255,.05);
+    transition:var(--transition);
 }
 
-.contact-icon{
-width:40px;
-height:40px;
-border-radius:11px;
-background:#eaf2ff;
-display:grid;
-place-items:center;
-color:var(--blue);
+.contact-link:hover{
+    border-color:rgba(194,24,104,.35);
+    transform:translateX(4px);
 }
 
-.contact-item small{
-display:block;
-font-size:11px;
-color:var(--muted);
-font-weight:700;
+.contact-link-icon{
+    width:43px;
+    height:43px;
+    border-radius:12px;
+    display:grid;
+    place-items:center;
+    background:#181818;
 }
 
-.contact-item strong{
-font-size:13px;
+.contact-link:nth-child(1) .contact-link-icon{
+    color:#25d366;
+}
+
+.contact-link:nth-child(2) .contact-link-icon{
+    color:var(--pink2);
+}
+
+.contact-link:nth-child(3) .contact-link-icon{
+    color:var(--gold2);
+}
+
+.contact-link strong{
+    display:block;
+    font-size:13px;
+}
+
+.contact-link small{
+    color:#707070;
+}
+
+.contact-form{
+    padding:32px;
+    border-radius:22px;
+    background:#0e0e0e;
+    border:1px solid rgba(255,255,255,.06);
+}
+
+.form-row{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:14px;
+}
+
+.form-group{
+    margin-bottom:16px;
+}
+
+.form-group label{
+    display:block;
+    font-size:12px;
+    font-weight:800;
+    color:#bdbdbd;
+    margin-bottom:7px;
+}
+
+.form-group input,
+.form-group textarea{
+    width:100%;
+    border:1px solid rgba(255,255,255,.09);
+    background:#080808;
+    color:white;
+    border-radius:12px;
+    padding:13px 14px;
+    outline:none;
+    transition:var(--transition);
+}
+
+.form-group textarea{
+    min-height:135px;
+    resize:vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus{
+    border-color:var(--gold);
+    box-shadow:0 0 0 3px rgba(212,175,55,.06);
+}
+
+/* =========================================================
+   SOCIAL
+   ========================================================= */
+
+.social-section{
+    padding:75px 0;
 }
 
 .social-box{
-margin-top:20px;
-padding:18px;
-border-radius:16px;
-background:#eaf2ff;
-display:flex;
-align-items:center;
-justify-content:space-between;
-gap:15px;
+    border-radius:28px;
+    padding:50px;
+    text-align:center;
+    background:
+        radial-gradient(circle at 20% 50%,rgba(194,24,104,.13),transparent 30%),
+        radial-gradient(circle at 80% 50%,rgba(212,175,55,.08),transparent 30%),
+        #0c0c0c;
+    border:1px solid rgba(212,175,55,.18);
+}
+
+.social-box h2{
+    font-size:35px;
+    margin-bottom:10px;
+}
+
+.social-box h2 span{
+    color:var(--pink2);
 }
 
 .social-box p{
-font-size:13px;
-color:var(--muted);
+    color:#777;
+    margin-bottom:25px;
 }
 
-.socials{
-display:flex;
-gap:8px;
+.social-buttons{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:12px;
 }
 
-.socials a{
-width:40px;
-height:40px;
-border-radius:11px;
-background:white;
-display:grid;
-place-items:center;
-color:var(--blue);
-font-weight:900;
-}
-
-.form-grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:14px;
-}
-
-.field{
-display:grid;
-gap:7px;
-}
-
-.field.full{
-grid-column:1/-1;
-}
-
-.field label{
-font-size:13px;
-font-weight:800;
-}
-
-.field input,
-.field textarea{
-width:100%;
-border:1px solid var(--border);
-background:var(--light);
-color:var(--text);
-border-radius:12px;
-padding:13px 14px;
-outline:none;
-}
-
-.field textarea{
-min-height:130px;
-resize:vertical;
-}
-
-.field input:focus,
-.field textarea:focus{
-border-color:var(--blue);
-box-shadow:0 0 0 3px rgba(11,92,255,.1);
-}
+/* =========================================================
+   NEWSLETTER
+   ========================================================= */
 
 .newsletter{
-background:linear-gradient(135deg,#061b42,#0b5cff);
-border-radius:28px;
-padding:45px;
-color:white;
-display:flex;
-align-items:center;
-justify-content:space-between;
-gap:25px;
+    padding:75px 0;
+    background:
+        linear-gradient(135deg,
+        #0e0709,
+        #0a0a0a,
+        #100b06);
+    border-top:1px solid rgba(212,175,55,.12);
+    border-bottom:1px solid rgba(194,24,104,.12);
 }
 
-.newsletter h2{
-font-size:30px;
-line-height:1.1;
+.newsletter-box{
+    max-width:800px;
+    margin:auto;
+    text-align:center;
 }
 
-.newsletter p{
-color:rgba(255,255,255,.72);
-margin-top:8px;
+.newsletter-box h2{
+    font-size:35px;
+    margin-bottom:8px;
 }
 
-.news-form{
-display:flex;
-gap:8px;
-min-width:min(430px,100%);
+.newsletter-box h2 span{
+    color:var(--gold2);
 }
 
-.news-form input{
-flex:1;
-min-width:0;
-border:0;
-border-radius:12px;
-padding:13px 15px;
-outline:0;
+.newsletter-box p{
+    color:#777;
+    margin-bottom:25px;
 }
 
-.news-form button{
-background:white;
-color:var(--blue);
+.newsletter-form{
+    display:flex;
+    max-width:600px;
+    margin:auto;
+    gap:10px;
 }
 
-footer{
-background:#061327;
-color:#dbe7ff;
-padding:65px 0 25px;
+.newsletter-form input{
+    flex:1;
+    min-width:0;
+    background:#050505;
+    border:1px solid rgba(255,255,255,.1);
+    color:white;
+    border-radius:12px;
+    padding:14px;
+    outline:none;
+}
+
+.newsletter-form input:focus{
+    border-color:var(--pink2);
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.footer{
+    background:#040404;
+    padding:60px 0 25px;
+    border-top:1px solid rgba(255,255,255,.05);
 }
 
 .footer-grid{
-display:grid;
-grid-template-columns:1.3fr repeat(3,1fr);
-gap:35px;
-}
-
-.footer-logo{
-font-size:23px;
-font-weight:950;
-color:white;
+    display:grid;
+    grid-template-columns:1.4fr 1fr 1fr 1fr;
+    gap:40px;
+    padding-bottom:45px;
 }
 
 .footer-brand p{
-color:#8fa2c2;
-font-size:13px;
-margin:12px 0 18px;
-max-width:330px;
+    color:#666;
+    font-size:13px;
+    max-width:300px;
+    margin-top:15px;
 }
 
-.footer-title{
-color:white;
-font-size:14px;
-font-weight:850;
-margin-bottom:15px;
+.footer h4{
+    margin-bottom:16px;
+    color:var(--gold2);
 }
 
 .footer-links{
-display:grid;
-gap:9px;
+    display:grid;
+    gap:9px;
 }
 
 .footer-links a{
-color:#8fa2c2;
-font-size:13px;
+    color:#777;
+    font-size:13px;
+    transition:var(--transition);
 }
 
 .footer-links a:hover{
-color:white;
+    color:var(--pink2);
+    transform:translateX(3px);
 }
 
 .footer-bottom{
-border-top:1px solid rgba(255,255,255,.09);
-margin-top:40px;
-padding-top:20px;
-display:flex;
-justify-content:space-between;
-gap:15px;
-color:#7890b3;
-font-size:12px;
+    border-top:1px solid rgba(255,255,255,.06);
+    padding-top:20px;
+    display:flex;
+    justify-content:space-between;
+    gap:20px;
+    color:#555;
+    font-size:12px;
 }
 
-.drawer-bg{
-position:fixed;
-inset:0;
-background:rgba(0,0,0,.5);
-z-index:2000;
-opacity:0;
-visibility:hidden;
-transition:.25s;
+.footer-bottom strong{
+    color:var(--gold2);
 }
 
-.drawer{
-position:absolute;
-right:0;
-top:0;
-height:100%;
-width:min(430px,92vw);
-background:white;
-padding:25px;
-transform:translateX(100%);
-transition:.25s;
+/* =========================================================
+   CART DRAWER
+   ========================================================= */
+
+.overlay{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.7);
+    backdrop-filter:blur(4px);
+    z-index:2000;
+    opacity:0;
+    pointer-events:none;
+    transition:var(--transition);
 }
 
-.drawer-bg.show{
-opacity:1;
-visibility:visible;
+.overlay.active{
+    opacity:1;
+    pointer-events:auto;
 }
 
-.drawer-bg.show .drawer{
-transform:translateX(0);
+.cart{
+    position:fixed;
+    top:0;
+    right:-430px;
+    width:min(430px,92%);
+    height:100vh;
+    background:#0a0a0a;
+    border-left:1px solid rgba(212,175,55,.2);
+    z-index:2100;
+    transition:.4s ease;
+    display:flex;
+    flex-direction:column;
 }
 
-.drawer-head{
-display:flex;
-justify-content:space-between;
-align-items:center;
+.cart.active{
+    right:0;
 }
 
-.drawer-head h3{
-font-size:23px;
+.cart-head{
+    padding:22px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border-bottom:1px solid rgba(255,255,255,.06);
 }
 
-.empty-cart{
-text-align:center;
-padding:70px 15px;
-color:var(--muted);
+.cart-head h3{
+    color:var(--gold2);
 }
 
-.empty-cart-icon{
-font-size:50px;
-margin-bottom:12px;
+.cart-body{
+    flex:1;
+    display:grid;
+    place-items:center;
+    text-align:center;
+    padding:30px;
 }
+
+.cart-empty-icon{
+    width:70px;
+    height:70px;
+    border-radius:20px;
+    display:grid;
+    place-items:center;
+    margin:0 auto 15px;
+    color:var(--pink2);
+    border:1px solid rgba(194,24,104,.2);
+    background:#131313;
+    font-size:27px;
+}
+
+.cart-body p{
+    color:#707070;
+    font-size:14px;
+}
+
+/* =========================================================
+   SEARCH
+   ========================================================= */
+
+.search-box{
+    position:fixed;
+    inset:0;
+    z-index:3000;
+    background:rgba(0,0,0,.88);
+    backdrop-filter:blur(15px);
+    display:none;
+    align-items:flex-start;
+    justify-content:center;
+    padding-top:120px;
+}
+
+.search-box.active{
+    display:flex;
+}
+
+.search-inner{
+    width:min(700px,90%);
+}
+
+.search-inner input{
+    width:100%;
+    background:#101010;
+    color:white;
+    border:1px solid rgba(212,175,55,.4);
+    border-radius:16px;
+    padding:20px;
+    font-size:20px;
+    outline:none;
+}
+
+.search-hint{
+    color:#777;
+    font-size:12px;
+    margin-top:10px;
+}
+
+/* =========================================================
+   TOAST
+   ========================================================= */
 
 .toast{
-position:fixed;
-right:20px;
-bottom:20px;
-z-index:3000;
-background:#101828;
-color:white;
-padding:13px 17px;
-border-radius:13px;
-opacity:0;
-transform:translateY(30px);
-pointer-events:none;
-transition:.25s;
-font-size:13px;
-font-weight:750;
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    z-index:5000;
+    background:#121212;
+    color:white;
+    border:1px solid rgba(212,175,55,.3);
+    border-left:4px solid var(--pink2);
+    padding:15px 18px;
+    border-radius:13px;
+    box-shadow:var(--shadow);
+    transform:translateY(120px);
+    opacity:0;
+    transition:.35s ease;
+    max-width:340px;
+    font-size:13px;
 }
 
 .toast.show{
-opacity:1;
-transform:translateY(0);
+    transform:translateY(0);
+    opacity:1;
 }
 
-.back-top{
-position:fixed;
-right:20px;
-bottom:75px;
-z-index:900;
-width:43px;
-height:43px;
-border-radius:13px;
-background:var(--blue);
-color:white;
-display:grid;
-place-items:center;
-opacity:0;
-visibility:hidden;
-transition:.2s;
-border:0;
+/* =========================================================
+   BACK TO TOP
+   ========================================================= */
+
+.backtop{
+    position:fixed;
+    right:20px;
+    bottom:80px;
+    width:45px;
+    height:45px;
+    border:1px solid rgba(212,175,55,.3);
+    background:#101010;
+    color:var(--gold2);
+    border-radius:13px;
+    z-index:900;
+    opacity:0;
+    pointer-events:none;
+    transition:var(--transition);
 }
 
-.back-top.show{
-opacity:1;
-visibility:visible;
+.backtop.show{
+    opacity:1;
+    pointer-events:auto;
 }
+
+.backtop:hover{
+    color:white;
+    border-color:var(--pink2);
+}
+
+/* =========================================================
+   REVEAL
+   ========================================================= */
 
 .reveal{
-opacity:0;
-transform:translateY(22px);
-transition:.65s ease;
+    opacity:0;
+    transform:translateY(25px);
+    transition:.7s ease;
 }
 
 .reveal.visible{
-opacity:1;
-transform:none;
+    opacity:1;
+    transform:translateY(0);
 }
 
-@media(max-width:950px){
+/* =========================================================
+   SPECIAL COLOR TEXT
+   ========================================================= */
 
-.nav-links{
-display:none;
+.gold-text{
+    color:var(--gold2);
 }
 
-.menu-button{
-display:grid;
+.pink-text{
+    color:var(--pink2);
 }
 
-.hero-grid,
-.about,
-.contact-grid{
-grid-template-columns:1fr;
+.red-text{
+    color:var(--red2);
 }
 
-.categories{
-grid-template-columns:repeat(2,1fr);
+.white-text{
+    color:white;
 }
 
-.features{
-grid-template-columns:1fr 1fr;
-}
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
 
-.footer-grid{
-grid-template-columns:1fr 1fr;
-}
+@media(max-width:1000px){
 
+    .nav-links{
+        display:none;
+    }
+
+    .menu-btn{
+        display:grid;
+    }
+
+    .hero-grid{
+        grid-template-columns:1fr;
+        text-align:center;
+    }
+
+    .hero-content{
+        margin:auto;
+    }
+
+    .hero-buttons{
+        justify-content:center;
+    }
+
+    .hero-visual{
+        max-width:500px;
+        margin:auto;
+        width:100%;
+    }
+
+    .categories{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .why-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .about-grid{
+        grid-template-columns:1fr;
+    }
+
+    .about-art{
+        max-width:600px;
+        width:100%;
+        margin:auto;
+    }
+
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+
+    .footer-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
 }
 
 @media(max-width:650px){
 
-.section{
-padding:65px 0;
+    .topbar{
+        font-size:11px;
+    }
+
+    .nav{
+        min-height:68px;
+    }
+
+    .logo{
+        font-size:17px;
+    }
+
+    .logo-mark{
+        width:38px;
+        height:38px;
+        border-radius:11px;
+    }
+
+    .nav-actions .search-btn{
+        display:none;
+    }
+
+    .hero{
+        min-height:auto;
+        padding:80px 0 60px;
+    }
+
+    .hero h1{
+        letter-spacing:-1.5px;
+        font-size:44px;
+    }
+
+    .hero-text{
+        font-size:14px;
+    }
+
+    .hero-buttons{
+        flex-direction:column;
+    }
+
+    .hero-buttons .btn{
+        width:100%;
+    }
+
+    .hero-card{
+        min-height:350px;
+        padding:25px;
+    }
+
+    .hero-orb{
+        width:170px;
+        height:170px;
+    }
+
+    .stats-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .stat{
+        border-right:0;
+    }
+
+    .section{
+        padding:70px 0;
+    }
+
+    .categories{
+        grid-template-columns:1fr;
+    }
+
+    .features{
+        grid-template-columns:1fr;
+    }
+
+    .why-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .form-row{
+        grid-template-columns:1fr;
+    }
+
+    .newsletter-form{
+        flex-direction:column;
+    }
+
+    .newsletter-form .btn{
+        width:100%;
+    }
+
+    .social-box{
+        padding:35px 20px;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr;
+        gap:28px;
+    }
+
+    .footer-bottom{
+        flex-direction:column;
+    }
 }
 
-.topbar-content{
-justify-content:center;
+/* =========================================================
+   EXTRA PREMIUM EFFECTS
+   ========================================================= */
+
+.gold-line{
+    height:1px;
+    width:100%;
+    background:
+        linear-gradient(
+        90deg,
+        transparent,
+        var(--gold),
+        var(--pink),
+        var(--red),
+        transparent);
+    opacity:.35;
 }
 
-.topbar-content span{
-display:none;
+.glow-gold{
+    box-shadow:0 0 25px rgba(212,175,55,.12);
 }
 
-.navbar{
-height:66px;
+.glow-pink{
+    box-shadow:0 0 25px rgba(194,24,104,.14);
 }
 
-.logo{
-font-size:17px;
+.glow-red{
+    box-shadow:0 0 25px rgba(181,18,32,.14);
 }
 
-.logo-box{
-width:38px;
-height:38px;
+::selection{
+    background:var(--pink);
+    color:white;
 }
 
-.hero{
-padding:60px 0;
+::-webkit-scrollbar{
+    width:8px;
 }
 
-.hero h1{
-letter-spacing:-2px;
+::-webkit-scrollbar-track{
+    background:#050505;
 }
 
-.hero p{
-font-size:16px;
+::-webkit-scrollbar-thumb{
+    background:
+        linear-gradient(
+        var(--gold),
+        var(--pink),
+        var(--red));
+    border-radius:20px;
 }
 
-.hero-card{
-min-height:340px;
-padding:15px;
-}
+/* =========================================================
+   END CSS
+   ========================================================= */
 
-.hero-inner{
-min-height:310px;
-}
-
-.aw-circle{
-width:105px;
-height:105px;
-font-size:36px;
-}
-
-.stats{
-grid-template-columns:1fr 1fr;
-}
-
-.categories,
-.features{
-grid-template-columns:1fr;
-}
-
-.about-image{
-min-height:320px;
-}
-
-.about-aw{
-font-size:70px;
-}
-
-.form-grid{
-grid-template-columns:1fr;
-}
-
-.field.full{
-grid-column:auto;
-}
-
-.newsletter{
-display:block;
-padding:30px 22px;
-}
-
-.news-form{
-margin-top:20px;
-min-width:0;
-}
-
-.footer-grid{
-grid-template-columns:1fr 1fr;
-}
-
-.footer-bottom{
-display:block;
-}
-
-.footer-bottom span{
-display:block;
-margin-top:6px;
-}
-
-}
-
-@media(max-width:420px){
-
-.footer-grid{
-grid-template-columns:1fr;
-}
-
-.hero-buttons .btn{
-width:100%;
-}
-
-}
 </style>
 </head>
 
 <body>
 
+<!-- =======================================================
+     TOP BAR
+     ======================================================= -->
+
 <div class="topbar">
-<div class="container topbar-content">
-<span>✨ Welcome to AW ALI STORE — Premium Online Shopping</span>
-<a href="#contact">Need Help? Contact Us →</a>
-</div>
+    ✦ <strong>AW ALI STORE</strong> ✦
+    <span>Premium Shopping Experience</span>
 </div>
 
-<header>
+<!-- =======================================================
+     HEADER
+     ======================================================= -->
 
-<nav class="container navbar">
+<header class="header">
 
-<a href="#home" class="logo">
-<span class="logo-box">AW</span>
-<span class="logo-text">
-AW ALI STORE
-<small>SHOP SMART • SHOP EASY</small>
-</span>
-</a>
+    <div class="container nav">
 
-<div class="nav-links">
-<a href="#home">Home</a>
-<a href="#categories">Categories</a>
-<a href="#products">Products</a>
-<a href="#about">About</a>
-<a href="#faq">FAQ</a>
-<a href="#contact">Contact</a>
-</div>
+        <a href="#home" class="logo">
 
-<div class="nav-buttons">
+            <div class="logo-mark">
+                W
+            </div>
 
-<button class="icon-button" id="searchButton" aria-label="Search">
-⌕
-</button>
+            <div class="logo-text">
+                <span>AW</span>
+                <span> ALI STORE</span>
+            </div>
 
-<button class="icon-button" id="cartButton" aria-label="Shopping cart">
-🛒
-</button>
+        </a>
 
-<button class="icon-button menu-button" id="menuButton" aria-label="Menu">
-☰
-</button>
+        <nav class="nav-links">
 
-</div>
+            <a href="#home">Home</a>
+            <a href="#categories">Categories</a>
+            <a href="#products">Products</a>
+            <a href="#about">About</a>
+            <a href="#faq">FAQ</a>
+            <a href="#contact">Contact</a>
 
-</nav>
+        </nav>
+
+        <div class="nav-actions">
+
+            <button class="icon-btn search-btn" onclick="openSearch()" aria-label="Search">
+                🔍
+            </button>
+
+            <button class="icon-btn" onclick="openCart()" aria-label="Cart">
+                🛒
+            </button>
+
+            <button class="icon-btn menu-btn" onclick="toggleMenu()" aria-label="Menu">
+                ☰
+            </button>
+
+        </div>
+
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu">
+
+        <a href="#home" onclick="closeMenu()">Home</a>
+        <a href="#categories" onclick="closeMenu()">Categories</a>
+        <a href="#products" onclick="closeMenu()">Products</a>
+        <a href="#about" onclick="closeMenu()">About</a>
+        <a href="#faq" onclick="closeMenu()">FAQ</a>
+        <a href="#contact" onclick="closeMenu()">Contact</a>
+
+    </div>
 
 </header>
 
-<main>
+<!-- =======================================================
+     HERO
+     ======================================================= -->
 
 <section class="hero" id="home">
 
-<div class="container hero-grid">
+    <div class="container hero-grid">
 
-<div class="reveal">
+        <div class="hero-content reveal">
 
-<div class="badge">
-💙 PREMIUM ONLINE STORE
-</div>
+            <div class="hero-badge">
+                <i></i>
+                AW ALI STORE
+            </div>
 
-<h1>
-Welcome to
-<span>AW ALI STORE</span>
-</h1>
+            <h1>
+                Shop Smart.
+                <span class="gold">Live</span>
+                <span class="pink">Better.</span>
+            </h1>
 
-<p>
-A modern and professional online shopping experience.
-Our store is being prepared for real products, real prices
-and direct customer contact.
-</p>
+            <p class="hero-text">
+                Welcome to AW ALI STORE — a modern online shopping
+                destination built with style, simplicity and trust.
+            </p>
 
-<div class="hero-buttons">
+            <div class="hero-buttons">
 
-<a href="#products" class="btn btn-primary">
-Explore Store →
-</a>
+                <a href="#products" class="btn btn-gold">
+                    Explore Store
+                </a>
 
-<a href="#contact" class="btn btn-outline">
-Contact Us
-</a>
+                <a href="#contact" class="btn btn-red">
+                    Contact Us
+                </a>
 
-</div>
+                <a href="https://www.instagram.com/aw.ali.store?stkn=MTJmazl5aXBtbHEweA=="
+                   target="_blank"
+                   class="btn btn-pink">
+                    Instagram
+                </a>
 
-<div class="stats">
+            </div>
 
-<div class="stat">
-<strong>AW</strong>
-<span>Our Brand</span>
-</div>
+        </div>
 
-<div class="stat">
-<strong>24/7</strong>
-<span>Online Access</span>
-</div>
+        <div class="hero-visual reveal">
 
-<div class="stat">
-<strong>100%</strong>
-<span>Mobile Friendly</span>
-</div>
+            <div class="hero-card">
 
-<div class="stat">
-<strong>∞</strong>
-<span>Growing Store</span>
-</div>
+                <div class="hero-card-top">
 
-</div>
+                    <div class="hero-card-label">
+                        AW ALI STORE
+                    </div>
 
-</div>
+                    <div class="hero-card-symbol">
+                        W
+                    </div>
 
-<div class="hero-card reveal">
+                </div>
 
-<div class="hero-inner">
+                <div class="hero-orb"></div>
 
-<div class="aw-circle">
-AW
-</div>
+                <div class="hero-card-bottom">
 
-<h2>
-AW ALI STORE
-</h2>
+                    <h3>
+                        Premium Store
+                    </h3>
 
-<p>
-Premium Design • Simple Shopping • Customer First
-</p>
+                    <p>
+                        Quality • Style • Trust
+                    </p>
 
-</div>
+                </div>
 
-</div>
+            </div>
 
-</div>
+        </div>
+
+    </div>
 
 </section>
+
+<!-- =======================================================
+     STATS
+     ======================================================= -->
+
+<section class="stats">
+
+    <div class="container stats-grid">
+
+        <div class="stat">
+            <strong>24/7</strong>
+            <span>Online Access</span>
+        </div>
+
+        <div class="stat">
+            <strong>100%</strong>
+            <span>Customer Focus</span>
+        </div>
+
+        <div class="stat">
+            <strong>Easy</strong>
+            <span>Shopping</span>
+        </div>
+
+        <div class="stat">
+            <strong>AW</strong>
+            <span>Ali Store</span>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =======================================================
+     CATEGORIES
+     ======================================================= -->
 
 <section class="section" id="categories">
 
-<div class="container">
+    <div class="container">
 
-<div class="section-title reveal">
+        <div class="section-head reveal">
 
-<div class="badge">
-EXPLORE
-</div>
+            <div class="eyebrow">
+                Explore
+            </div>
 
-<h2>
-Shop by Category
-</h2>
+            <h2>
+                Store <span>Categories</span>
+            </h2>
 
-<p>
-Our categories are ready for your real products.
-No fake products have been added.
-</p>
+            <p>
+                Our store is prepared for multiple product categories.
+                Products can be added whenever you are ready.
+            </p>
 
-</div>
+        </div>
 
-<div class="categories">
+        <div class="categories">
 
-<a href="#products" class="category reveal">
-<div class="category-icon">📱</div>
-<h3>Mobile & Tech</h3>
-<p>Smart gadgets and useful technology.</p>
-<span class="category-arrow">→</span>
-</a>
+            <div class="category reveal">
 
-<a href="#products" class="category reveal">
-<div class="category-icon">🎮</div>
-<h3>Gaming</h3>
-<p>Gaming accessories and lifestyle products.</p>
-<span class="category-arrow">→</span>
-</a>
+                <div class="category-icon">
+                    ◈
+                </div>
 
-<a href="#products" class="category reveal">
-<div class="category-icon">🏠</div>
-<h3>Home & Living</h3>
-<p>Useful items for everyday life.</p>
-<span class="category-arrow">→</span>
-</a>
+                <h3>
+                    Electronics
+                </h3>
 
-<a href="#products" class="category reveal">
-<div class="category-icon">🔥</div>
-<h3>Trending</h3>
-<p>Popular products and new arrivals.</p>
-<span class="category-arrow">→</span>
-</a>
+                <p>
+                    Smart devices and useful technology.
+                </p>
 
-</div>
+            </div>
 
-</div>
+            <div class="category reveal">
+
+                <div class="category-icon">
+                    ✦
+                </div>
+
+                <h3>
+                    Fashion
+                </h3>
+
+                <p>
+                    Modern and stylish products.
+                </p>
+
+            </div>
+
+            <div class="category reveal">
+
+                <div class="category-icon">
+                    ◆
+                </div>
+
+                <h3>
+                    Accessories
+                </h3>
+
+                <p>
+                    Everyday accessories and essentials.
+                </p>
+
+            </div>
+
+            <div class="category reveal">
+
+                <div class="category-icon">
+                    ♢
+                </div>
+
+                <h3>
+                    Lifestyle
+                </h3>
+
+                <p>
+                    Products designed for everyday life.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =======================================================
+     PRODUCTS
+     ======================================================= -->
+
+<section class="section section-dark" id="products">
+
+    <div class="container">
+
+        <div class="section-head reveal">
+
+            <div class="eyebrow">
+                Store
+            </div>
+
+            <h2>
+                Products <span>Coming Soon</span>
+            </h2>
+
+            <p>
+                New products will appear here when they are added
+                to AW ALI STORE.
+            </p>
+
+        </div>
+
+        <div class="product-empty reveal">
+
+            <div>
+
+                <div class="empty-icon">
+                    🛍
+                </div>
+
+                <h3>
+                    Products Coming Soon
+                </h3>
+
+                <p>
+                    The store is ready. Add your real products,
+                    prices and customer order links whenever you want.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
 
 </section>
 
-<section class="section" id="products">
-
-<div class="container">
-
-<div class="section-title reveal">
-
-<div class="badge">
-STORE
-</div>
-
-<h2>
-Our Products
-</h2>
-
-<p>
-Real products will be displayed here when you add them.
-</p>
-
-</div>
-
-<div class="empty-store reveal">
-
-<div class="empty-icon">
-🛍️
-</div>
-
-<h3>
-Products Coming Soon
-</h3>
-
-<p>
-AW ALI STORE is ready for your real products.
-Add your own product name, image, price, description
-and WhatsApp order link when you are ready.
-</p>
-
-<a href="#contact" class="btn btn-primary">
-Ask About Products
-</a>
-
-</div>
-
-</div>
-
-</section>
+<!-- =======================================================
+     FEATURES
+     ======================================================= -->
 
 <section class="section">
 
-<div class="container">
+    <div class="container">
 
-<div class="section-title reveal">
+        <div class="section-head reveal">
 
-<div class="badge">
-WHY US
-</div>
+            <div class="eyebrow">
+                Why AW ALI STORE
+            </div>
 
-<h2>
-Built for a Better Shopping Experience
-</h2>
+            <h2>
+                Built For A <span>Better Experience</span>
+            </h2>
 
-<p>
-Professional design with a strong mobile-first foundation.
-</p>
+            <p>
+                A clean storefront designed to grow with your business.
+            </p>
 
-</div>
+        </div>
 
-<div class="features">
+        <div class="features">
 
-<div class="feature reveal">
-<div class="feature-icon">⚡</div>
-<h3>Fast & Simple</h3>
-<p>
-Clean navigation helps customers find information quickly.
-</p>
-</div>
+            <div class="feature reveal">
 
-<div class="feature reveal">
-<div class="feature-icon">📱</div>
-<h3>Mobile First</h3>
-<p>
-Designed to work smoothly on Android phones, iPhones and tablets.
-</p>
-</div>
+                <div class="feature-icon">
+                    🛡️
+                </div>
 
-<div class="feature reveal">
-<div class="feature-icon">🔒</div>
-<h3>Trust Focused</h3>
-<p>
-Clear contact areas make it easier for customers to reach you.
-</p>
-</div>
+                <h3>
+                    Simple & Clear
+                </h3>
 
-<div class="feature reveal">
-<div class="feature-icon">🎨</div>
-<h3>Premium Design</h3>
-<p>
-Modern blue branding with polished cards and spacing.
-</p>
-</div>
+                <p>
+                    Customers can easily understand your store
+                    and find the information they need.
+                </p>
 
-<div class="feature reveal">
-<div class="feature-icon">🧩</div>
-<h3>Easy to Expand</h3>
-<p>
-The store can be expanded with your real products later.
-</p>
-</div>
+            </div>
 
-<div class="feature reveal">
-<div class="feature-icon">💬</div>
-<h3>Direct Contact</h3>
-<p>
-Instagram and WhatsApp can be connected to your own accounts.
-</p>
-</div>
+            <div class="feature reveal">
 
-</div>
+                <div class="feature-icon">
+                    ⚡
+                </div>
 
-</div>
+                <h3>
+                    Fast Experience
+                </h3>
 
-</section>
+                <p>
+                    Lightweight design with no external libraries
+                    required.
+                </p>
 
-<section class="section" id="about">
+            </div>
 
-<div class="container about">
+            <div class="feature reveal">
 
-<div class="about-image reveal">
-<div class="about-aw">AW</div>
-</div>
+                <div class="feature-icon">
+                    📱
+                </div>
 
-<div class="about-content reveal">
+                <h3>
+                    Mobile Friendly
+                </h3>
 
-<div class="badge">
-ABOUT US
-</div>
+                <p>
+                    Designed to look good on phones, tablets
+                    and desktop screens.
+                </p>
 
-<h2>
-Simple Shopping.
-Strong Brand.
-</h2>
+            </div>
 
-<p>
-AW ALI STORE is being built as a modern online store where
-customers can discover useful products and contact the store directly.
-</p>
+        </div>
 
-<p>
-This website uses a professional foundation without fake products,
-fake prices or fake customer information.
-</p>
-
-<div class="check-list">
-
-<div class="check">
-<span>✓</span>
-Professional blue brand identity
-</div>
-
-<div class="check">
-<span>✓</span>
-Responsive mobile-friendly layout
-</div>
-
-<div class="check">
-<span>✓</span>
-Real-product-ready structure
-</div>
-
-<div class="check">
-<span>✓</span>
-Direct social/contact sections
-</div>
-
-</div>
-
-</div>
-
-</div>
+    </div>
 
 </section>
 
-<section class="section" id="faq">
+<!-- =======================================================
+     ABOUT
+     ======================================================= -->
 
-<div class="container">
+<section class="section section-dark" id="about">
 
-<div class="section-title reveal">
+    <div class="container about-grid">
 
-<div class="badge">
-HELP CENTER
-</div>
+        <div class="about-art reveal">
 
-<h2>
-Frequently Asked Questions
-</h2>
+            <div class="about-logo">
 
-<p>
-Quick answers for AW ALI STORE visitors.
-</p>
+                <div class="about-logo-box">
+                    AW
+                </div>
 
-</div>
+            </div>
 
-<div class="faq-list">
+        </div>
 
-<div class="faq reveal">
+        <div class="about-content reveal">
 
-<button class="faq-question" type="button">
-<span>Are products available right now?</span>
-<span class="plus">+</span>
-</button>
+            <div class="eyebrow">
+                About Us
+            </div>
 
-<div class="faq-answer">
-The current version intentionally contains no demo products.
-Your real products can be added when they are ready.
-</div>
+            <h2>
+                Welcome To
+                <span>AW ALI STORE</span>
+            </h2>
 
-</div>
+            <p>
+                AW ALI STORE is designed as a modern online shopping
+                platform where useful products can be presented
+                in a clean and professional way.
+            </p>
 
-<div class="faq reveal">
+            <ul class="about-list">
 
-<button class="faq-question" type="button">
-<span>Can I order through WhatsApp?</span>
-<span class="plus">+</span>
-</button>
+                <li>
+                    Clean and professional storefront
+                </li>
 
-<div class="faq-answer">
-Yes. Your own WhatsApp number can be connected so customers
-can contact you directly.
-</div>
+                <li>
+                    Mobile-friendly design
+                </li>
 
-</div>
+                <li>
+                    Direct customer contact option
+                </li>
 
-<div class="faq reveal">
+                <li>
+                    Easy product expansion
+                </li>
 
-<button class="faq-question" type="button">
-<span>Is Instagram connected?</span>
-<span class="plus">+</span>
-</button>
+                <li>
+                    Modern premium visual identity
+                </li>
 
-<div class="faq-answer">
-Yes. The Instagram buttons on this website point to
-the AW ALI STORE Instagram profile.
-</div>
+            </ul>
 
-</div>
+        </div>
 
-<div class="faq reveal">
-
-<button class="faq-question" type="button">
-<span>Does the website work on mobile?</span>
-<span class="plus">+</span>
-</button>
-
-<div class="faq-answer">
-Yes. The design is responsive for phones, tablets and computers.
-</div>
-
-</div>
-
-<div class="faq reveal">
-
-<button class="faq-question" type="button">
-<span>Can payment be added later?</span>
-<span class="plus">+</span>
-</button>
-
-<div class="faq-answer">
-A real payment system requires a suitable payment provider
-and backend setup. This website does not pretend that payments
-are already connected.
-</div>
-
-</div>
-
-</div>
-
-</div>
+    </div>
 
 </section>
+
+<!-- =======================================================
+     WHY US
+     ======================================================= -->
+
+<section class="section">
+
+    <div class="container">
+
+        <div class="section-head reveal">
+
+            <div class="eyebrow">
+                Our Focus
+            </div>
+
+            <h2>
+                Made To <span>Grow</span>
+            </h2>
+
+        </div>
+
+        <div class="why-grid">
+
+            <div class="why-card reveal">
+
+                <strong>01</strong>
+
+                <span>
+                    Clean Design
+                </span>
+
+            </div>
+
+            <div class="why-card reveal">
+
+                <strong>02</strong>
+
+                <span>
+                    Direct Contact
+                </span>
+
+            </div>
+
+            <div class="why-card reveal">
+
+                <strong>03</strong>
+
+                <span>
+                    Easy Shopping
+                </span>
+
+            </div>
+
+            <div class="why-card reveal">
+
+                <strong>04</strong>
+
+                <span>
+                    Future Ready
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =======================================================
+     FAQ
+     ======================================================= -->
+
+<section class="section section-dark" id="faq">
+
+    <div class="container">
+
+        <div class="section-head reveal">
+
+            <div class="eyebrow">
+                Questions
+            </div>
+
+            <h2>
+                Frequently Asked <span>Questions</span>
+            </h2>
+
+        </div>
+
+        <div class="faq">
+
+            <div class="faq-item reveal">
+
+                <button class="faq-question">
+                    Are products available right now?
+                    <span>+</span>
+                </button>
+
+                <div class="faq-answer">
+
+                    <p>
+                        Products will be added to the store when
+                        they are ready.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="faq-item reveal">
+
+                <button class="faq-question">
+                    Can I contact AW ALI STORE?
+                    <span>+</span>
+                </button>
+
+                <div class="faq-answer">
+
+                    <p>
+                        Yes. You can contact the store through
+                        WhatsApp or Instagram.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="faq-item reveal">
+
+                <button class="faq-question">
+                    Is online payment available?
+                    <span>+</span>
+                </button>
+
+                <div class="faq-answer">
+
+                    <p>
+                        Payment options can be added later.
+                        This website itself does not process payments.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="faq-item reveal">
+
+                <button class="faq-question">
+                    Can new products be added?
+                    <span>+</span>
+                </button>
+
+                <div class="faq-answer">
+
+                    <p>
+                        Yes. New product cards can be added to
+                        the Products section.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =======================================================
+     CONTACT
+     ======================================================= -->
 
 <section class="section" id="contact">
 
-<div class="container">
+    <div class="container">
 
-<div class="section-title reveal">
+        <div class="section-head reveal">
 
-<div class="badge">
-GET IN TOUCH
-</div>
+            <div class="eyebrow">
+                Get In Touch
+            </div>
 
-<h2>
-Contact AW ALI STORE
-</h2>
+            <h2>
+                Contact <span>AW ALI STORE</span>
+            </h2>
 
-<p>
-Have a question? Send a message or connect through social media.
-</p>
+            <p>
+                Connect with us through your preferred platform.
+            </p>
 
-</div>
+        </div>
 
-<div class="contact-grid">
+        <div class="contact-grid">
 
-<div class="contact-card reveal">
+            <div class="contact-info reveal">
 
-<h3>
-Let's Connect
-</h3>
+                <h3>
+                    Let's Talk
+                </h3>
 
-<p>
-Use your real contact details here so customers can reach you directly.
-</p>
+                <p>
+                    For product questions, business inquiries
+                    or general messages, contact us directly.
+                </p>
 
-<div class="contact-list">
+                <div class="contact-links">
 
-<a class="contact-item"
-href="https://www.instagram.com/aw.ali.store?stkn=MTJmazl5aXBtbHEweA=="
-target="_blank"
-rel="noopener">
+                    <a href="https://wa.me/YOUR_WHATSAPP_NUMBER"
+                       class="contact-link"
+                       onclick="whatsappNotice(event)"
+                       target="_blank">
 
-<div class="contact-icon">
-◎
-</div>
+                        <div class="contact-link-icon">
+                            WA
+                        </div>
 
-<div>
-<small>Instagram</small>
-<strong>@aw.ali.store</strong>
-</div>
+                        <div>
+                            <strong>WhatsApp</strong>
+                            <small>Direct message</small>
+                        </div>
 
-</a>
+                    </a>
 
-<a class="contact-item"
-href="https://wa.me/YOUR_WHATSAPP_NUMBER"
-onclick="return whatsappNotice()">
+                    <a href="https://www.instagram.com/aw.ali.store?stkn=MTJmazl5aXBtbHEweA=="
+                       target="_blank"
+                       class="contact-link">
 
-<div class="contact-icon">
-💬
-</div>
+                        <div class="contact-link-icon">
+                            IG
+                        </div>
 
-<div>
-<small>WhatsApp</small>
-<strong>Chat Directly With Us</strong>
-</div>
+                        <div>
+                            <strong>Instagram</strong>
+                            <small>@aw.ali.store</small>
+                        </div>
 
-</a>
+                    </a>
 
-<div class="contact-item">
+                    <a href="#home"
+                       class="contact-link">
 
-<div class="contact-icon">
-🛒
-</div>
+                        <div class="contact-link-icon">
+                            AW
+                        </div>
 
-<div>
-<small>Store</small>
-<strong>AW ALI STORE</strong>
-</div>
+                        <div>
+                            <strong>AW ALI STORE</strong>
+                            <small>Online Store</small>
+                        </div>
 
-</div>
+                    </a>
 
-</div>
+                </div>
 
-<div class="social-box">
+            </div>
 
-<div>
-<strong>Follow Our Updates</strong>
-<p>Connect with AW ALI STORE on Instagram.</p>
-</div>
+            <form class="contact-form reveal"
+                  onsubmit="submitContact(event)">
 
-<div class="socials">
+                <div class="form-row">
 
-<a
-href="https://www.instagram.com/aw.ali.store?stkn=MTJmazl5aXBtbHEweA=="
-target="_blank"
-rel="noopener">
-IG
-</a>
+                    <div class="form-group">
 
-<a
-href="https://wa.me/YOUR_WHATSAPP_NUMBER"
-onclick="return whatsappNotice()">
-WA
-</a>
+                        <label>
+                            Your Name
+                        </label>
 
-</div>
+                        <input
+                            type="text"
+                            id="contactName"
+                            placeholder="Enter your name"
+                            required
+                        >
 
-</div>
+                    </div>
 
-</div>
+                    <div class="form-group">
 
-<div class="form-card reveal">
+                        <label>
+                            Email
+                        </label>
 
-<h3>
-Send a Message
-</h3>
+                        <input
+                            type="email"
+                            id="contactEmail"
+                            placeholder="Enter your email"
+                            required
+                        >
 
-<form id="contactForm">
+                    </div>
 
-<div class="form-grid">
+                </div>
 
-<div class="field">
-<label for="name">Your Name</label>
-<input
-id="name"
-type="text"
-placeholder="Enter your name"
-required>
-</div>
+                <div class="form-group">
 
-<div class="field">
-<label for="phone">Phone / WhatsApp</label>
-<input
-id="phone"
-type="tel"
-placeholder="Enter your number">
-</div>
+                    <label>
+                        Message
+                    </label>
 
-<div class="field full">
-<label for="email">Email</label>
-<input
-id="email"
-type="email"
-placeholder="Enter your email">
-</div>
+                    <textarea
+                        id="contactMessage"
+                        placeholder="Write your message..."
+                        required
+                    ></textarea>
 
-<div class="field full">
-<label for="message">Message</label>
-<textarea
-id="message"
-placeholder="Write your message..."
-required></textarea>
-</div>
+                </div>
 
-<div class="field full">
+                <button class="btn btn-gold" type="submit">
+                    Send Message
+                </button>
 
-<button
-class="btn btn-primary"
-type="submit">
-Send Message →
-</button>
+            </form>
 
-</div>
+        </div>
 
-</div>
-
-</form>
-
-</div>
-
-</div>
-
-</div>
+    </div>
 
 </section>
 
-<section class="section">
+<!-- =======================================================
+     SOCIAL
+     ======================================================= -->
 
-<div class="container">
+<section class="social-section">
 
-<div class="newsletter reveal">
+    <div class="container">
 
-<div>
+        <div class="social-box reveal">
 
-<h2>
-Stay Updated With AW ALI STORE
-</h2>
+            <div class="eyebrow">
+                Follow Us
+            </div>
 
-<p>
-Subscribe for future product announcements and store updates.
-</p>
+            <h2>
+                AW ALI <span>STORE</span>
+            </h2>
 
-</div>
+            <p>
+                Follow our Instagram for updates and new products.
+            </p>
 
-<form class="news-form" id="newsletterForm">
+            <div class="social-buttons">
 
-<input
-type="email"
-id="newsletterEmail"
-placeholder="Your email address"
-required>
+                <a href="https://www.instagram.com/aw.ali.store?stkn=MTJmazl5aXBtbHEweA=="
+                   target="_blank"
+                   class="btn btn-pink">
+                    Instagram
+                </a>
 
-<button class="btn" type="submit">
-Subscribe
-</button>
+                <a href="https://wa.me/YOUR_WHATSAPP_NUMBER"
+                   target="_blank"
+                   class="btn btn-red"
+                   onclick="whatsappNotice(event)">
+                    WhatsApp
+                </a>
 
-</form>
+            </div>
 
-</div>
+        </div>
 
-</div>
+    </div>
 
 </section>
 
-</main>
+<!-- =======================================================
+     NEWSLETTER
+     ======================================================= -->
 
-<footer>
+<section class="newsletter">
 
-<div class="container">
+    <div class="container">
 
-<div class="footer-grid">
+        <div class="newsletter-box reveal">
 
-<div class="footer-brand">
+            <div class="eyebrow">
+                Stay Updated
+            </div>
 
-<div class="footer-logo">
-AW ALI STORE
-</div>
+            <h2>
+                Join Our <span>Updates</span>
+            </h2>
 
-<p>
-A modern online store foundation made for a clean,
-trusted and mobile-friendly shopping experience.
-</p>
+            <p>
+                Enter your email to receive store updates.
+            </p>
 
-<div class="socials">
+            <form class="newsletter-form"
+                  onsubmit="subscribe(event)">
 
-<a
-href="https://www.instagram.com/aw.ali.store?stkn=MTJmazl5aXBtbHEweA=="
-target="_blank"
-rel="noopener">
-IG
-</a>
+                <input
+                    type="email"
+                    id="newsletterEmail"
+                    placeholder="Your email address"
+                    required
+                >
 
-<a
-href="https://wa.me/YOUR_WHATSAPP_NUMBER"
-onclick="return whatsappNotice()">
-WA
-</a>
+                <button
+                    class="btn btn-gold"
+                    type="submit">
+                    Subscribe
+                </button>
 
-</div>
+            </form>
 
-</div>
+        </div>
 
-<div>
+    </div>
 
-<div class="footer-title">
-Store
-</div>
+</section>
 
-<div class="footer-links">
-<a href="#home">Home</a>
-<a href="#categories">Categories</a>
-<a href="#products">Products</a>
-<a href="#about">About Us</a>
-</div>
+<!-- =======================================================
+     FOOTER
+     ======================================================= -->
 
-</div>
+<footer class="footer">
 
-<div>
+    <div class="container">
 
-<div class="footer-title">
-Support
-</div>
+        <div class="footer-grid">
 
-<div class="footer-links">
-<a href="#faq">FAQ</a>
-<a href="#contact">Contact</a>
-<a href="#contact">Order Help</a>
-<a href="#contact">Customer Support</a>
-</div>
+            <div class="footer-brand">
 
-</div>
+                <a href="#home" class="logo">
 
-<div>
+                    <div class="logo-mark">
+                        W
+                    </div>
 
-<div class="footer-title">
-Follow
-</div>
+                    <div class="logo-text">
+                        <span>AW</span>
+                        <span> ALI STORE</span>
+                    </div>
 
-<div class="footer-links">
+                </a>
 
-<a
-href="https://www.instagram.com/aw.ali.store?stkn=MTJmazl5aXBtbHEweA=="
-target="_blank"
-rel="noopener">
-Instagram
-</a>
+                <p>
+                    A modern online storefront created for
+                    AW ALI STORE.
+                </p>
 
-<a
-href="https://wa.me/YOUR_WHATSAPP_NUMBER"
-onclick="return whatsappNotice()">
-WhatsApp
-</a>
+            </div>
 
-<a href="#home">
-Back To Top
-</a>
+            <div>
 
-</div>
+                <h4>
+                    Store
+                </h4>
 
-</div>
+                <div class="footer-links">
 
-</div>
+                    <a href="#home">Home</a>
+                    <a href="#categories">Categories</a>
+                    <a href="#products">Products</a>
+                    <a href="#about">About</a>
 
-<div class="footer-bottom">
+                </div>
 
-<span>
-© <span id="year"></span> AW ALI STORE. All rights reserved.
-</span>
+            </div>
 
-<span>
-Premium Mobile Shopping Experience.
-</span>
+            <div>
 
-</div>
+                <h4>
+                    Help
+                </h4>
 
-</div>
+                <div class="footer-links">
+
+                    <a href="#faq">FAQ</a>
+                    <a href="#contact">Contact</a>
+                    <a href="#contact">Support</a>
+
+                </div>
+
+            </div>
+
+            <div>
+
+                <h4>
+                    Social
+                </h4>
+
+                <div class="footer-links">
+
+                    <a href="https://www.instagram.com/aw.ali.store?stkn=MTJmazl5aXBtbHEweA=="
+                       target="_blank">
+                        Instagram
+                    </a>
+
+                    <a href="https://wa.me/YOUR_WHATSAPP_NUMBER"
+                       target="_blank"
+                       onclick="whatsappNotice(event)">
+                        WhatsApp
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+
+            <div>
+                © <span id="year"></span>
+                <strong>AW ALI STORE</strong>
+                — All Rights Reserved.
+            </div>
+
+            <div>
+                Premium • Simple • Modern
+            </div>
+
+        </div>
+
+    </div>
 
 </footer>
 
-<div class="drawer-bg" id="drawer">
+<!-- =======================================================
+     CART
+     ======================================================= -->
 
-<div class="drawer">
+<div class="overlay"
+     id="overlay"
+     onclick="closeAll()">
+</div>
 
-<div class="drawer-head">
+<aside class="cart"
+       id="cart">
 
-<h3>
-Your Cart
-</h3>
+    <div class="cart-head">
 
-<button
-class="icon-button"
-id="closeCart">
-×
+        <h3>
+            Your Cart
+        </h3>
+
+        <button
+            class="icon-btn"
+            onclick="closeCart()">
+            ✕
+        </button>
+
+    </div>
+
+    <div class="cart-body">
+
+        <div>
+
+            <div class="cart-empty-icon">
+                🛒
+            </div>
+
+            <h3>
+                Your cart is empty
+            </h3>
+
+            <p>
+                Products will appear here when they are added.
+            </p>
+
+        </div>
+
+    </div>
+
+</aside>
+
+<!-- =======================================================
+     SEARCH
+     ======================================================= -->
+
+<div class="search-box"
+     id="searchBox">
+
+    <div class="search-inner">
+
+        <input
+            type="search"
+            id="searchInput"
+            placeholder="Search AW ALI STORE..."
+            onkeydown="searchKey(event)"
+        >
+
+        <div class="search-hint">
+            Press ESC to close
+        </div>
+
+    </div>
+
+</div>
+
+<!-- =======================================================
+     TOAST
+     ======================================================= -->
+
+<div class="toast"
+     id="toast">
+</div>
+
+<!-- =======================================================
+     BACK TOP
+     ======================================================= -->
+
+<button class="backtop"
+        id="backtop"
+        onclick="window.scrollTo({top:0,behavior:'smooth'})">
+    ↑
 </button>
 
-</div>
-
-<div class="empty-cart">
-
-<div class="empty-cart-icon">
-🛒
-</div>
-
-<h3>
-Your Cart Is Empty
-</h3>
-
-<p>
-Real products will appear here after you add them.
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="toast" id="toast">
-Done
-</div>
-
-<button class="back-top" id="backTop">
-↑
-</button>
+<!-- =======================================================
+     JAVASCRIPT
+     ======================================================= -->
 
 <script>
 
-const $ = (selector) => document.querySelector(selector);
+/* =========================================================
+   YEAR
+   ========================================================= */
 
-const $$ = (selector) => document.querySelectorAll(selector);
+document.getElementById("year").textContent =
+    new Date().getFullYear();
 
-document.addEventListener("DOMContentLoaded", function(){
+/* =========================================================
+   MOBILE MENU
+   ========================================================= */
 
-$("#year").textContent = new Date().getFullYear();
+function toggleMenu(){
 
-$("#cartButton").addEventListener("click",function(){
-$("#drawer").classList.add("show");
-});
+    const menu =
+        document.getElementById("mobileMenu");
 
-$("#closeCart").addEventListener("click",function(){
-$("#drawer").classList.remove("show");
-});
-
-$("#drawer").addEventListener("click",function(event){
-if(event.target === $("#drawer")){
-$("#drawer").classList.remove("show");
-}
-});
-
-$$(".faq-question").forEach(function(button){
-
-button.addEventListener("click",function(){
-
-const item = button.parentElement;
-
-$$(".faq").forEach(function(faq){
-if(faq !== item){
-faq.classList.remove("open");
-}
-});
-
-item.classList.toggle("open");
-
-});
-
-});
-
-$("#contactForm").addEventListener("submit",function(event){
-
-event.preventDefault();
-
-showToast("Message form is ready.");
-
-this.reset();
-
-});
-
-$("#newsletterForm").addEventListener("submit",function(event){
-
-event.preventDefault();
-
-showToast("Subscription saved on this page.");
-
-this.reset();
-
-});
-
-$("#searchButton").addEventListener("click",function(){
-
-const search = prompt("What are you looking for?");
-
-if(search && search.trim()){
-
-showToast(
-"Products are coming soon: " + search.trim()
-);
-
+    menu.classList.toggle("active");
 }
 
-});
+function closeMenu(){
 
-const backTop = $("#backTop");
+    const menu =
+        document.getElementById("mobileMenu");
 
-window.addEventListener("scroll",function(){
+    menu.classList.remove("active");
+}
 
-if(window.scrollY > 500){
+/* =========================================================
+   CART
+   ========================================================= */
 
-backTop.classList.add("show");
+function openCart(){
 
-}else{
+    document
+        .getElementById("cart")
+        .classList.add("active");
 
-backTop.classList.remove("show");
+    document
+        .getElementById("overlay")
+        .classList.add("active");
+
+    document.body.style.overflow="hidden";
+}
+
+function closeCart(){
+
+    document
+        .getElementById("cart")
+        .classList.remove("active");
+
+    document
+        .getElementById("overlay")
+        .classList.remove("active");
+
+    document.body.style.overflow="";
+}
+
+/* =========================================================
+   SEARCH
+   ========================================================= */
+
+function openSearch(){
+
+    document
+        .getElementById("searchBox")
+        .classList.add("active");
+
+    document
+        .getElementById("searchInput")
+        .focus();
+
+    document.body.style.overflow="hidden";
+}
+
+function closeSearch(){
+
+    document
+        .getElementById("searchBox")
+        .classList.remove("active");
+
+    document.body.style.overflow="";
+}
+
+function searchKey(event){
+
+    if(event.key==="Escape"){
+
+        closeSearch();
+
+    }
+
+    if(event.key==="Enter"){
+
+        const value =
+            document
+            .getElementById("searchInput")
+            .value
+            .trim();
+
+        if(value){
+
+            showToast(
+                "Search is ready. Products will appear when added."
+            );
+
+        }
+
+    }
 
 }
 
-});
+/* =========================================================
+   CLOSE ALL
+   ========================================================= */
 
-backTop.addEventListener("click",function(){
+function closeAll(){
 
-window.scrollTo({
-top:0,
-behavior:"smooth"
-});
-
-});
-
-const observer = new IntersectionObserver(
-function(entries){
-
-entries.forEach(function(entry){
-
-if(entry.isIntersecting){
-
-entry.target.classList.add("visible");
-
-observer.unobserve(entry.target);
+    closeCart();
+    closeSearch();
 
 }
 
-});
+/* =========================================================
+   TOAST
+   ========================================================= */
 
-},
-{
-threshold:.12
-}
-);
-
-$$(".reveal").forEach(function(element){
-
-observer.observe(element);
-
-});
-
-});
+let toastTimer;
 
 function showToast(message){
 
-const toast = $("#toast");
+    const toast =
+        document.getElementById("toast");
 
-toast.textContent = message;
+    toast.textContent=message;
 
-toast.classList.add("show");
+    toast.classList.add("show");
 
-clearTimeout(window.awTimer);
+    clearTimeout(toastTimer);
 
-window.awTimer = setTimeout(function(){
+    toastTimer=setTimeout(function(){
 
-toast.classList.remove("show");
+        toast.classList.remove("show");
 
-},3000);
+    },3500);
+
+}
+
+/* =========================================================
+   CONTACT FORM
+   ========================================================= */
+
+function submitContact(event){
+
+    event.preventDefault();
+
+    const name =
+        document.getElementById("contactName").value;
+
+    showToast(
+        "Thanks "+name+"! Your message form is ready."
+    );
+
+    event.target.reset();
 
 }
 
-function whatsappNotice(){
+/* =========================================================
+   NEWSLETTER
+   ========================================================= */
 
-showToast(
-"Apna real WhatsApp number code mein add karein."
-);
+function subscribe(event){
 
-return false;
+    event.preventDefault();
+
+    showToast(
+        "Thank you! Newsletter signup is ready."
+    );
+
+    event.target.reset();
 
 }
+
+/* =========================================================
+   WHATSAPP
+   ========================================================= */
+
+function whatsappNotice(event){
+
+    const link =
+        event.currentTarget.getAttribute("href");
+
+    if(link.includes("YOUR_WHATSAPP_NUMBER")){
+
+        event.preventDefault();
+
+        showToast(
+            "Apna real WhatsApp number code mein add karna hai."
+        );
+
+    }
+
+}
+
+/* =========================================================
+   FAQ
+   ========================================================= */
+
+document
+.querySelectorAll(".faq-question")
+.forEach(function(button){
+
+    button.addEventListener("click",function(){
+
+        const item =
+            button.parentElement;
+
+        const answer =
+            item.querySelector(".faq-answer");
+
+        const isActive =
+            item.classList.contains("active");
+
+        document
+        .querySelectorAll(".faq-item")
+        .forEach(function(other){
+
+            other.classList.remove("active");
+
+            other
+            .querySelector(".faq-answer")
+            .style.maxHeight=null;
+
+        });
+
+        if(!isActive){
+
+            item.classList.add("active");
+
+            answer.style.maxHeight =
+                answer.scrollHeight+"px";
+
+        }
+
+    });
+
+});
+
+/* =========================================================
+   BACK TO TOP
+   ========================================================= */
+
+window.addEventListener("scroll",function(){
+
+    const backtop =
+        document.getElementById("backtop");
+
+    if(window.scrollY>500){
+
+        backtop.classList.add("show");
+
+    }else{
+
+        backtop.classList.remove("show");
+
+    }
+
+});
+
+/* =========================================================
+   REVEAL ANIMATION
+   ========================================================= */
+
+const observer =
+    new IntersectionObserver(
+        function(entries){
+
+            entries.forEach(function(entry){
+
+                if(entry.isIntersecting){
+
+                    entry
+                    .target
+                    .classList
+                    .add("visible");
+
+                    observer.unobserve(
+                        entry.target
+                    );
+
+                }
+
+            });
+
+        },
+        {
+            threshold:.12
+        }
+    );
+
+document
+.querySelectorAll(".reveal")
+.forEach(function(element){
+
+    observer.observe(element);
+
+});
+
+/* =========================================================
+   ESCAPE
+   ========================================================= */
+
+document.addEventListener("keydown",function(event){
+
+    if(event.key==="Escape"){
+
+        closeAll();
+        closeMenu();
+
+    }
+
+});
+
+/* =========================================================
+   MOBILE LINK CLOSE
+   ========================================================= */
+
+document
+.querySelectorAll(".mobile-menu a")
+.forEach(function(link){
+
+    link.addEventListener("click",function(){
+
+        closeMenu();
+
+    });
+
+});
+
+/* =========================================================
+   INITIAL MESSAGE
+   ========================================================= */
+
+setTimeout(function(){
+
+    showToast(
+        "Welcome to AW ALI STORE ❤️"
+    );
+
+},1200);
+
+/* =========================================================
+   END JAVASCRIPT
+   ========================================================= */
 
 </script>
 
