@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ALI STORE</title>
+
+<style>
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+  font-family:Arial,sans-serif;
+}
+
+body{
+  background:#f4f6f8;
+  color:#111;
+}
+
+header{
+  background:#111827;
+  color:white;
+  padding:18px 15px;
+  text-align:center;
+}
+
+.logo{
+  font-size:30px;
+  font-weight:bold;
+}
+
+.logo span{
+  color:#00e676;
+}
+
+header p{
+  margin-top:6px;
+  color:#d1d5db;
+}
+
+.hero{
+  background:linear-gradient(135deg,#111827,#374151);
+  color:white;
+  text-align:center;
+  padding:45px 18px;
+}
+
+.hero h1{
+  font-size:34px;
+  margin-bottom:12px;
+}
+
+.hero p{
+  font-size:17px;
+  margin-bottom:20px;
+}
+
+.shop-btn{
+  display:inline-block;
+  background:#00e676;
+  color:#111;
+  padding:13px 25px;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+.section{
+  padding:30px 15px;
+  max-width:1100px;
+  margin:auto;
+}
+
+.section h2{
+  text-align:center;
+  margin-bottom:25px;
+  font-size:27px;
+}
+
+.products{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
+  gap:18px;
+}
+
+.card{
+  background:white;
+  border-radius:15px;
+  overflow:hidden;
+  box-shadow:0 4px 15px rgba(0,0,0,.10);
+  padding-bottom:18px;
+}
+
+.card img{
+  width:100%;
+  height:210px;
+  object-fit:cover;
+  background:#eee;
+}
+
+.card h3{
+  padding:14px 14px 5px;
+  font-size:19px;
+}
+
+.card p{
+  padding:5px 14px;
+  color:#666;
+}
+
+.price{
+  color:#0a9f50 !important;
+  font-size:21px;
+  font-weight:bold;
+}
+
+.order{
+  display:block;
+  margin:12px 14px 0;
+  background:#25D366;
+  color:white;
+  text-align:center;
+  padding:12px;
+  border-radius:8px;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+.about{
+  background:white;
+  border-radius:15px;
+  padding:25px;
+  line-height:1.7;
+  text-align:center;
+}
+
+.contact{
+  background:#111827;
+  color:white;
+  text-align:center;
+  padding:35px 15px;
+}
+
+.contact h2{
+  margin-bottom:12px;
+}
+
+.whatsapp{
+  display:inline-block;
+  margin-top:18px;
+  background:#25D366;
+  color:white;
+  padding:13px 25px;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+footer{
+  background:#080b10;
+  color:#aaa;
+  text-align:center;
+  padding:18px;
+  font-size:14px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo"><span>W</span> ALI STORE</div>
+  <p>Online Shopping Store</p>
+</header>
+
+<section class="hero">
+  <h1>Welcome to ALI STORE</h1>
+  <p>Best Products • Best Deals • Easy Ordering</p>
+  <a href="#products" class="shop-btn">Shop Now</a>
+</section>
+
+<section class="section" id="products">
+  <h2>Our Products</h2>
+
+  <div class="products">
+
+    <div class="card">
+      <img src="https://via.placeholder.com/500x500?text=Product+1">
+      <h3>Product One</h3>
+      <p>Quality product at a great price.</p>
+      <p class="price">Rs. 1,500</p>
+      <a class="order" href="https://wa.me/923000000000?text=I%20want%20to%20order%20Product%20One">
+        Order on WhatsApp
+      </a>
+    </div>
+
+    <div class="card">
+      <img src="https://via.placeholder.com/500x500?text=Product+2">
+      <h3>Product Two</h3>
+      <p>Best deal for online shoppers.</p>
+      <p class="price">Rs. 2,000</p>
+      <a class="order" href="https://wa.me/923000000000?text=I%20want%20to%20order%20Product%20Two">
+        Order on WhatsApp
+      </a>
+    </div>
+
+    <div class="card">
+      <img src="https://via.placeholder.com/500x500?text=Product+3">
+      <h3>Product Three</h3>
+      <p>Affordable and useful product.</p>
+      <p class="price">Rs. 2,500</p>
+      <a class="order" href="https://wa.me/923000000000?text=I%20want%20to%20order%20Product%20Three">
+        Order on WhatsApp
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<section class="section">
+  <h2>About ALI STORE</h2>
+
+  <div class="about">
+    <p>
+      ALI STORE is an online shopping store where you can
+      find useful products and great deals.
+      Contact us on WhatsApp to place your order.
+    </p>
+  </div>
+</section>
+
+<section class="contact">
+  <h2>Need Help?</h2>
+  <p>Contact ALI STORE on WhatsApp</p>
+
+  <a class="whatsapp"
+     href="https://wa.me/923000000000?text=Hello%20ALI%20STORE">
+     WhatsApp Us
+  </a>
+</section>
+
+<footer>
+  © 2026 ALI STORE — All Rights Reserved
+</footer>
+
+</body>
+</html>
